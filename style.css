@@ -103,3 +103,21 @@ footer {
     color: #3b2a1e;        /*darker brown on hover*/
     transform: scale(1.2);  /*zoom effect 20% larger*/
 }
+
+/* Styling for small, elegant social icons */
+.social-icon-img {
+    width: 33px;           /* Change this number (e.g., 20px, 25px) to get the size you want */
+    height: 33px;          /* Keep width and height the same */
+    margin: 0 10px;        /* Spacing between the small icons */
+    transition: all 0.3s ease; /* Smooth hover effect */
+    opacity: 0.7;          /* Slightly faded look */
+    display: inline-block;
+}
+
+/* Hover effect for the small icons */
+.social-icon-img:hover {
+    transform: translateY(-5px) scale(1.1); /* Small lift and grow effect */
+    opacity: 1;                             /* Full color on hover */
+}
+
+
