@@ -305,3 +305,141 @@ footer {
     40% {transform: translateY(-12px);}
     60% {transform: translateY(-6px);}
 }
+/* --- REWARDS SECTION STYLING --- */
+
+.rewards-section {
+    padding: 60px 20px;
+    background-color: #fff; /* Clean white background */
+}
+
+/* Centered container for the box */
+.rewards-section .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* --- REWARDS BOX (WITH NEW RED BORDER!) --- */
+
+.rewards-box {
+    /* Existing colors (or whatever you chose) */
+    background: linear-gradient(135deg, #ffffff 0%, #f4b907 100%); 
+    color: rgb(225, 0, 0);
+    padding: 40px 50px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    /* --- ΤΟ ΝΕΟ ΚΟΚΚΙΝΟ ΠΕΡΙΓΡΑΜΜΑ --- */
+    
+    border: 10px solid #eb1207; 
+    
+    /* Αναβαθμισμένη σκιά για να ταιριάζει με το κόκκινο */
+    box-shadow: 0 10px 30px rgba(111, 182, 12, 0.2); 
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ενημέρωση και στο hover */
+.rewards-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(255, 59, 48, 0.3);
+}
+
+
+
+.rewards-tag {
+    background-color: #ffc107; /* Gold/yellow tag for emphasis */
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.rewards-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: rgb(9, 5, 5);
+}
+
+.rewards-content p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    color: rgba(100, 85, 85, 0.9);
+    line-height: 1.5;
+}
+
+/* Το κουμπί "Μάθε πώς" μέσα στο rewards box */
+.btn-rewards {
+    padding: 12px 28px;
+    background-color: #ff0000; /* Λευκό φόντο στο κουμπί */
+    color: #ffffff;            /* Μαύρα γράμματα */
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 700;          /* Έντονα γράμματα */
+    font-size: 14px;
+
+    /* --- ΤΟ ΜΑΥΡΟ ΠΕΡΙΓΡΑΜΜΑ --- */
+    /* 2px πάχος, solid (γεμάτη γραμμή), μαύρο χρώμα */
+    border: 2px solid #000000; 
+
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Τι γίνεται όταν ακουμπάς το κουμπί (Hover) */
+.btn-rewards:hover {
+    background-color: #fff0c5; /* Το κουμπί γίνεται μαύρο */
+    color: #000000;            /* Τα γράμματα γίνονται λευκά */
+
+    /* Κρατάμε το περίγραμμα, απλά αλλάζουμε το χρώμα σε λευκό (ή μαύρο) */
+    border-color: #000000; 
+
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+.rewards-icon-container {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+}
+
+
+/* --- REWARDS ICON IMAGE (UPDATED) --- */
+
+.rewards-icon-img {
+    width: 70%;            /* Fills the container, but... */
+    max-width: 130px;       /* ...NEVER grows larger than this size! (Try 120px or 140px) */
+    height: auto;           /* Keeps the aspect ratio correct */
+    display: block;         /* Best practice for centering and alignment */
+    margin: 0 auto;         /* Centers the image within its container */
+    
+    /* Removed previous scale and rotate for a cleaner look */
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 768px) {
+    .rewards-box {
+        flex-direction: column-reverse; /* Icons below text on mobile */
+        text-align: center;
+        padding: 30px;
+    }
+    .rewards-content {
+        text-align: center;
+    }
+    .rewards-icon-container {
+        margin-left: 0;
+        margin-bottom: 20px;
+        width: 100px;
+    }
+    .rewards-content h2 {
+        font-size: 1.8rem;
+    }
+}
