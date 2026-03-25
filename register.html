@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Εγγραφή Φοιτητή | StudyBrew</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">Study<span>Brew</span></a></div>
+        <ul>
+            <li><a href="index.html#features">Λειτουργίες</a></li>
+            <li><a href="index.html#about">About us</a></li>
+        </ul>
+    </nav>
+
+    <section class="form-section">
+        <div class="form-container">
+            <h2>Γίνε μέλος του StudyBrew 🎓</h2>
+            <p>Κλείσε το επόμενο study spot σου με λίγα κλικ.</p>
+            
+            <form action="#" method="POST" class="register-form">
+                
+                <div class="input-group">
+                    <label for="fullname">Ονοματεπώνυμο</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="π.χ. Γιώργος Παπαδόπουλος" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="university">Πανεπιστήμιο / Σχολή</label>
+                    <input type="text" id="university" name="university" placeholder="π.χ. ΕΚΠΑ - Πληροφορική" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Το προσωπικό ή ακαδημαϊκό σου email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Κωδικός Πρόσβασης</label>
+                    <input type="password" id="password" name="password" placeholder="Δημιούργησε έναν ισχυρό κωδικό" required>
+                </div>
+
+                <button type="submit" class="btn-primary form-btn">Ολοκλήρωση Εγγραφής</button>
+                
+                <p class="login-link">Έχεις ήδη λογαριασμό; <a href="login.html">Κάνε Είσοδο</a></p>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>

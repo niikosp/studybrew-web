@@ -1,3 +1,4 @@
+/* --- GLOBAL STYLES --- */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +12,7 @@ body {
     background-color: #fcfaf8;
 }
 
-/* Navigation */
+/* --- NAVIGATION --- */
 nav {
     display: flex;
     justify-content: space-between;
@@ -19,6 +20,9 @@ nav {
     padding: 20px 10%;
     background: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky; /* Keeps menu at the top */
+    top: 0;
+    z-index: 1000;
 }
 
 .logo {
@@ -31,9 +35,10 @@ nav {
 
 nav ul { display: flex; list-style: none; }
 nav ul li { margin-left: 20px; }
-nav ul li a { text-decoration: none; color: #333; font-weight: 400; }
+nav ul li a { text-decoration: none; color: #333; font-weight: 400; transition: 0.3s; }
+nav ul li a:hover { color: #d17a22; }
 
-/* Hero Section */
+/* --- HERO SECTION --- */
 .hero {
     height: 80vh;
     display: flex;
@@ -49,8 +54,8 @@ nav ul li a { text-decoration: none; color: #333; font-weight: 400; }
 .hero h1 { font-size: 3rem; margin-bottom: 20px; }
 .hero h1 span { color: #d17a22; }
 
-.btn-primary, .btn-secondary {
-    padding: 15px 30px;
+.btn-primary, .btn-secondary, .btn-outline {
+    padding: 12px 28px;
     text-decoration: none;
     border-radius: 30px;
     font-weight: 600;
@@ -59,65 +64,118 @@ nav ul li a { text-decoration: none; color: #333; font-weight: 400; }
     transition: 0.3s;
 }
 
-.btn-primary { background: #d17a22; color: white; }
+.btn-primary { background: #d17a22; color: white; border: 2px solid #d17a22; }
 .btn-secondary { background: white; color: #333; }
-.btn-primary:hover { background: #b0651a; }
+.btn-outline { border: 2px solid #fff; color: #fff; background: transparent; }
 
-/* Features */
-.features {
+.btn-primary:hover { background: #b0651a; transform: translateY(-3px); }
+.btn-outline:hover { background: #fff; color: #333; }
+
+/* --- SHOPS GRID (NEW) --- */
+.shops-section { padding: 80px 10%; text-align: center; background: #fff; }
+.shops-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    padding: 80px 10%;
-    text-align: center;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
 }
-
-.feature-card {
-    padding: 30px;
-    background: white;
+.shop-card {
+    background: #fdfaf7;
     border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
 }
+.shop-card:hover { transform: translateY(-10px); }
+.shop-card img { width: 100%; height: 180px; object-fit: cover; }
+.shop-info { padding: 20px; text-align: left; }
 
-/*settings for footer container */
+/* --- ABOUT US / TEAM (NEW) --- */
+.about-section { padding: 80px 10%; text-align: center; background: #fdfbf7; }
+.team-container { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 40px; }
+.team-card { background: white; padding: 30px; border-radius: 20px; width: 250px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.member-photo { width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 15px; border: 3px solid #d17a22; object-fit: cover; }
+
+/* --- FOOTER & SOCIAL ICONS --- */
 footer {
     text-align: center;
-    padding: 30px;
-    background-color: #f4f1ee; /*ligh coffee cream backround */
+    padding: 40px;
+    background-color: #f4f1ee;
+    border-top: 1px solid #eaddcf;
 }
 
-.social-links {
-    margin-top: 15px;
-}
+.social-links { margin-top: 20px; }
 
-.social-links a {
-    font-size: 20px;       /* size of the icon */
-    color: #6F4E37;        /* coffe brown colour */
-    margin: 0 15px;        /*spacing between apps*/                     
-    text-decoration: none; /*remove underline*/
-    transition: 0.3s;      /*smooth transistion*/
-    display: inline-block;
-}
-
-.social-links a:hover {
-    color: #3b2a1e;        /*darker brown on hover*/
-    transform: scale(1.2);  /*zoom effect 20% larger*/
-}
-
-/* Styling for small, elegant social icons */
+/* Small, elegant social icons styling */
 .social-icon-img {
-    width: 33px;           /* Change this number (e.g., 20px, 25px) to get the size you want */
-    height: 33px;          /* Keep width and height the same */
-    margin: 0 10px;        /* Spacing between the small icons */
-    transition: all 0.3s ease; /* Smooth hover effect */
-    opacity: 0.7;          /* Slightly faded look */
+    width: 28px;           /* Perfect small size */
+    height: 28px;
+    margin: 0 12px;
+    transition: all 0.3s ease;
+    opacity: 0.7;
     display: inline-block;
+    object-fit: contain;
 }
 
-/* Hover effect for the small icons */
 .social-icon-img:hover {
-    transform: translateY(-5px) scale(1.1); /* Small lift and grow effect */
-    opacity: 1;                             /* Full color on hover */
+    transform: translateY(-5px) scale(1.2);
+    opacity: 1;
+    filter: drop-shadow(0 5px 8px rgba(0,0,0,0.2));
 }
 
+/* --- REGISTER FORM (RESTORED & CLEANED) --- */
+.form-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #fdfbf7 0%, #f3ede6 100%);
+    padding: 100px 20px 40px 20px;
+}
 
+.form-container {
+    background-color: #ffffff;
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(111, 78, 55, 0.08); 
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+}
+
+.input-group { margin-bottom: 20px; text-align: left; }
+.input-group label { display: block; font-weight: 600; color: #4a3b32; font-size: 14px; margin-bottom: 8px; }
+.input-group input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #e0d5c1;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #faf8f5;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #d48a56;
+    box-shadow: 0 0 0 4px rgba(212, 138, 86, 0.15); 
+}
+
+.form-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #d48a56;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-btn:hover { background-color: #c07743; transform: translateY(-2px); }
+
+/* --- SMOOTH SCROLL --- */
+html {
+    scroll-behavior: smooth;
+}
