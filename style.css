@@ -254,3 +254,54 @@ footer {
     }
 }
 
+/* --- SPOTS CIRCLE BUTTON (FILLED VERSION) --- */
+
+.spots-circle-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.spots-circle-btn {
+    width: 110px;           /* Slightly bigger for better visibility */
+    height: 110px;
+    background-color: #d17a22; /* Full Caramel Color */
+    color: white;           /* White text and icon */
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(209, 122, 34, 0.3); /* Soft glow shadow */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: bounce 2s infinite;
+}
+
+.circle-icon {
+    font-size: 26px;        /* Slightly larger icon */
+    margin-bottom: 2px;
+}
+
+.circle-text {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+}
+
+/* Hover Effect */
+.spots-circle-btn:hover {
+    background-color: #6f4e37; /* Changes to Coffee Brown on hover */
+    transform: scale(1.15) rotate(5deg); /* Grows and tilts slightly */
+    box-shadow: 0 12px 25px rgba(111, 78, 55, 0.4);
+    animation: none; /* Stops bouncing when you touch it */
+}
+
+/* The Bouncing Animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-12px);}
+    60% {transform: translateY(-6px);}
+}
