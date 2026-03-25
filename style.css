@@ -103,3 +103,135 @@ footer {
     color: #3b2a1e;        /*darker brown on hover*/
     transform: scale(1.2);  /*zoom effect 20% larger*/
 }
+
+/*REGISTER*/
+/* =========================================
+   ΣΤΥΛ ΓΙΑ ΤΗ ΣΕΛΙΔΑ ΕΓΓΡΑΦΗΣ (register.html)
+   ========================================= */
+
+/* Η περιοχή που "αγκαλιάζει" τη φόρμα */
+.form-section {
+    min-height: 100vh; /* Να πιάνει όλο το ύψος της οθόνης */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Ένα πολύ απαλό, ζεστό μπεζ/γκρι χρώμα φόντου που ταιριάζει με καφέ */
+    background: linear-gradient(135deg, #fdfbf7 0%, #f3ede6 100%);
+    padding: 100px 20px 40px 20px; /* Χώρος πάνω για το μενού */
+}
+
+/* Η λευκή κάρτα της φόρμας */
+.form-container {
+    background-color: #ffffff;
+    padding: 40px 50px;
+    border-radius: 20px;
+    /* Μια υπέροχη, απαλή σκιά που δίνει την αίσθηση ότι η κάρτα "επιπλέει" */
+    box-shadow: 0 15px 35px rgba(111, 78, 55, 0.08); 
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+}
+
+.form-container h2 {
+    color: #2c1e16; /* Σκούρο καφέ/μαύρο (espresso) */
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.form-container p {
+    color: #8b7355; /* Απαλό καφέ */
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+/* Στυλ για τα πεδία της φόρμας */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    color: #4a3b32;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #e0d5c1;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: #333;
+    background-color: #faf8f5;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Πολύ σημαντικό για να μην βγαίνουν τα inputs έξω από το κουτί */
+}
+
+/* Τι γίνεται όταν ο χρήστης κάνει κλικ μέσα στο πεδίο (Focus) */
+.input-group input:focus {
+    outline: none;
+    background-color: #ffffff;
+    border-color: #d48a56; /* Ένα ζεστό πορτοκαλί/καραμελέ χρώμα */
+    /* Ένα διακριτικό λαμπερό περίγραμμα (glow) γύρω από το πεδίο */
+    box-shadow: 0 0 0 4px rgba(212, 138, 86, 0.15); 
+}
+
+.input-group input::placeholder {
+    color: #bfaea3;
+}
+
+/* Το μεγάλο κουμπί εγγραφής */
+.form-btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    background-color: #d48a56; /* Το κύριο χρώμα (Caramel) */
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Τι γίνεται όταν πάει το ποντίκι πάνω από το κουμπί */
+.form-btn:hover {
+    background-color: #c07743;
+    transform: translateY(-2px); /* Σηκώνεται ελαφρώς προς τα πάνω */
+    box-shadow: 0 8px 20px rgba(212, 138, 86, 0.3);
+}
+
+/* Το link για το Login στο κάτω μέρος */
+.login-link {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #666;
+}
+
+.login-link a {
+    color: #d48a56;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+    color: #c07743;
+    text-decoration: underline;
+}
+
+/* Responsive: Για να φαίνεται τέλεια και σε κινητά */
+@media (max-width: 480px) {
+    .form-container {
+        padding: 30px 20px;
+    }
+    .form-container h2 {
+        font-size: 24px;
+    }
+}
