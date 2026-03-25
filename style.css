@@ -78,3 +78,28 @@ nav ul li a { text-decoration: none; color: #333; font-weight: 400; }
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
+
+/*settings for footer container */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #f4f1ee; /*ligh coffee cream backround */
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    font-size: 20px;       /* size of the icon */
+    color: #6F4E37;        /* coffe brown colour */
+    margin: 0 15px;        /*spacing between apps*/                     
+    text-decoration: none; /*remove underline*/
+    transition: 0.3s;      /*smooth transistion*/
+    display: inline-block;
+}
+
+.social-links a:hover {
+    color: #3b2a1e;        /*darker brown on hover*/
+    transform: scale(1.2);  /*zoom effect 20% larger*/
+}
