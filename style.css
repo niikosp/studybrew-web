@@ -6,76 +6,32 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif; /* Νέα Γραμματοσειρά */
     line-height: 1.6;
-    color: #333;
-    background-color: #fcfaf8; /* Απαλό κρεμ φόντο */
+    color: #2c1e16;
+    background-color: #fcfaf8;
 }
 
-/* --- NAVIGATION --- */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10%;
-    background: #fff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: 600;
-    color: #6f4e37;
-}
-
-.logo span { color: #d17a22; }
-
-nav ul { display: flex; list-style: none; }
-nav ul li { margin-left: 25px; }
-nav ul li a { text-decoration: none; color: #333; font-weight: 500; transition: 0.3s; }
-nav ul li a:hover { color: #d17a22; }
-
-/* --- HERO SECTION --- */
-.hero {
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1350&q=80');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 0 20px;
-}
-
-.hero h1 { font-size: 3rem; margin-bottom: 10px; }
-.hero h1 span { color: #ffc107; }
-
-/* --- SPOTS GRID SYSTEM --- */
+/* --- SPOTS GRID --- */
 .spots-grid-container {
-    padding: 60px 10%;
+    padding: 60px 5%;
 }
 
 .spots-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 35px;
-    max-width: 1200px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Πιο φαρδιές κάρτες */
+    gap: 40px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
-/* --- THE PREMIUM CARD --- */
+/* --- THE CARD --- */
 .spot-card {
     background: white;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    border: 1px solid #eee;
-    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -83,172 +39,105 @@ nav ul li a:hover { color: #d17a22; }
 
 .spot-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
-/* Photo Settings */
 .spot-image {
-    height: 230px;
-    width: 100%;
+    height: 250px; /* Μεγαλύτερη φωτό */
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    border-bottom: 1px solid #eee;
 }
 
-/* Info Section */
+/* --- INFO & FONTS --- */
 .spot-info {
-    padding: 25px;
-    flex-grow: 1;
-}
-
-.spot-header-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 12px;
+    padding: 30px;
 }
 
 .spot-tag {
     background: #fdf2e9;
     color: #d17a22;
-    padding: 5px 12px;
-    border-radius: 12px;
-    font-size: 11px;
+    padding: 6px 15px;
+    border-radius: 50px;
+    font-size: 13px;
     font-weight: 700;
-    text-transform: uppercase;
-}
-
-/* Stars & Rating */
-.spot-rating {
-    display: flex;
-    align-items: center;
-    gap: 5px;
 }
 
 .star {
     color: #ffc107; /* Χρυσό */
-    font-size: 16px;
-    letter-spacing: 1px;
+    font-size: 20px; /* Μεγαλύτερα αστέρια */
 }
 
 .rating-num {
     font-weight: 700;
-    font-size: 14px;
-    color: #2c1e16;
+    font-size: 18px; /* Μεγάλο νούμερο rating */
+    margin-left: 5px;
 }
 
-.review-count {
-    color: #999;
-    font-size: 12px;
-    font-weight: 400;
-}
-
-/* Content Text */
 .spot-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-    color: #2c1e16;
+    font-size: 1.9rem; /* Πολύ μεγαλύτερος τίτλος */
+    font-weight: 700;
+    margin: 15px 0 10px 0;
 }
 
 .spot-location {
-    font-size: 13px;
-    color: #777;
-    margin-bottom: 20px;
+    font-size: 16px; /* Μεγαλύτερη διεύθυνση */
+    color: #666;
+    margin-bottom: 25px;
 }
 
-/* Amenities Labels */
+/* --- AMENITIES --- */
 .spot-amenities {
     display: flex;
-    gap: 8px;
-    margin-bottom: 25px;
+    gap: 10px;
+    margin-bottom: 30px;
     flex-wrap: wrap;
 }
 
 .spot-amenities span {
-    background: #f5f5f5;
-    padding: 6px 12px;
-    border-radius: 8px;
-    font-size: 11px;
+    background: #f0f0f0;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-size: 14px;
     font-weight: 600;
-    color: #555;
-    border: 1px solid #eee;
 }
 
-/* Card Footer & Price */
+/* --- FOOTER & BUTTON --- */
 .spot-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 15px;
-    border-top: 1px dashed #ddd;
-}
-
-.price-label {
-    display: block;
-    font-size: 10px;
-    text-transform: uppercase;
-    color: #999;
-    letter-spacing: 0.5px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
 }
 
 .price-amount {
+    font-size: 22px; /* Μεγάλη τιμή */
     font-weight: 700;
     color: #6f4e37;
-    font-size: 18px;
 }
 
-/* The Button */
 .btn-book-now {
     background: #2c1e16;
     color: white;
-    padding: 12px 25px;
-    border-radius: 12px;
+    padding: 15px 30px;
+    border-radius: 15px;
     text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 700;
     transition: 0.3s;
 }
 
 .btn-book-now:hover {
     background: #d17a22;
-    transform: scale(1.05);
 }
 
-/* Badges */
+/* Badge */
 .badge-popular {
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: 20px;
+    left: 20px;
     background: #ffc107;
-    color: #000;
-    padding: 6px 14px;
+    padding: 8px 16px;
     border-radius: 50px;
-    font-size: 11px;
     font-weight: 700;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    z-index: 10;
-}
-
-/* --- FOOTER --- */
-footer {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #f4f1ee;
-    border-top: 1px solid #e0d5c1;
-    margin-top: 40px;
-}
-
-.social-icon-img {
-    width: 35px;
-    height: 35px;
-    margin: 0 10px;
-    transition: 0.3s;
-    opacity: 0.8;
-}
-
-.social-icon-img:hover {
-    transform: translateY(-5px);
-    opacity: 1;
+    font-size: 14px;
 }
