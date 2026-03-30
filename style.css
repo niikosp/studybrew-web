@@ -226,3 +226,102 @@ footer {
     .flow-arrow { display: none; }
     .hero h1 { font-size: 2rem; }
 }
+/* --- STUDY SPOTS CARDS (ΕΠΑΝΑΦΟΡΑ ΕΦΕ) --- */
+.spots-grid-container {
+    padding: 60px 10%;
+    width: 100%;
+}
+
+.spots-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.spot-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+}
+
+/* Το εφέ που σηκώνεται η κάρτα */
+.spot-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    border-color: #d17a22;
+}
+
+.spot-image {
+    height: 220px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+
+.spot-card:hover .spot-image {
+    transform: scale(1.05); /* Μικρό ζουμ στην εικόνα στο hover */
+}
+
+.spot-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.spot-tag {
+    background: #d17a22;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.spot-rating {
+    font-weight: 700;
+    color: #2c1e16;
+}
+
+.star { color: #ffc107; margin-right: 2px; }
+
+.btn-book-now {
+    background: #2c1e16;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn-book-now:hover {
+    background: #d17a22;
+    box-shadow: 0 5px 15px rgba(209, 122, 34, 0.4);
+}
+
+.badge-popular {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #ffc107;
+    color: #2c1e16;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 800;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
