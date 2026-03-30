@@ -1,3 +1,6 @@
+/* --- ΕΙΣΑΓΩΓΗ FONTS --- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
 /* --- ΓΕΝΙΚΕΣ ΡΥΘΜΙΣΕΙΣ --- */
 * {
     margin: 0;
@@ -6,138 +9,208 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif; /* Νέα Γραμματοσειρά */
-    line-height: 1.6;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7;
     color: #2c1e16;
-    background-color: #fcfaf8;
+    background-color: #fcfaf8; /* Απαλό κρεμ φόντο */
 }
 
-/* --- SPOTS GRID --- */
+/* --- SPOTS GRID SYSTEM (Διορθωμένο για Desktop) --- */
 .spots-grid-container {
-    padding: 60px 5%;
+    padding: 60px 20px;
+    max-width: 1250px;  /* Κλειδώνει το πλάτος για να φαίνεται σωστά σε PC */
+    margin: 0 auto;     /* Κεντράρει το grid */
 }
 
 .spots-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Πιο φαρδιές κάρτες */
-    gap: 40px;
-    max-width: 1300px;
-    margin: 0 auto;
+    /* Δημιουργεί 3 στήλες σε PC, 2 σε Tablet, 1 σε Κινητό */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+    gap: 40px; 
+    align-items: stretch;
 }
 
-/* --- THE CARD --- */
+/* --- THE PREMIUM CARD --- */
 .spot-card {
-    background: white;
-    border-radius: 20px;
+    background: #ffffff;
+    border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
     display: flex;
     flex-direction: column;
+    height: 100%;
     position: relative;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid rgba(0,0,0,0.03);
 }
 
+/* Hover Effects: Blur & Scale */
 .spot-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px); /* Το εφέ θολώματος */
+    -webkit-backdrop-filter: blur(12px);
 }
 
+/* Photo Settings & Zoom */
 .spot-image {
-    height: 250px; /* Μεγαλύτερη φωτό */
+    height: 250px;
+    width: 100%;
     background-size: cover;
     background-position: center;
+    transition: transform 0.6s ease;
 }
 
-/* --- INFO & FONTS --- */
+.spot-card:hover .spot-image {
+    transform: scale(1.1); /* Zoom στη φωτό */
+}
+
+/* --- INFO SECTION --- */
 .spot-info {
     padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Σπρώχνει το footer προς τα κάτω */
+}
+
+.spot-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
 }
 
 .spot-tag {
     background: #fdf2e9;
     color: #d17a22;
-    padding: 6px 15px;
+    padding: 6px 16px;
     border-radius: 50px;
     font-size: 13px;
     font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Stars & Rating */
+.spot-rating {
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .star {
-    color: #ffc107; /* Χρυσό */
-    font-size: 20px; /* Μεγαλύτερα αστέρια */
+    color: #ffc107;
+    font-size: 20px;
 }
 
 .rating-num {
     font-weight: 700;
-    font-size: 18px; /* Μεγάλο νούμερο rating */
-    margin-left: 5px;
+    font-size: 18px;
 }
 
+.review-count {
+    color: #999;
+    font-size: 14px;
+}
+
+/* Τίτλος & Τοποθεσία */
 .spot-info h3 {
-    font-size: 1.9rem; /* Πολύ μεγαλύτερος τίτλος */
+    font-size: 1.9rem;
     font-weight: 700;
-    margin: 15px 0 10px 0;
+    margin-bottom: 10px;
+    color: #2c1e16;
 }
 
 .spot-location {
-    font-size: 16px; /* Μεγαλύτερη διεύθυνση */
+    font-size: 16px;
     color: #666;
     margin-bottom: 25px;
 }
 
-/* --- AMENITIES --- */
+/* Amenities */
 .spot-amenities {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 30px;
-    flex-wrap: wrap;
 }
 
 .spot-amenities span {
-    background: #f0f0f0;
-    padding: 10px 18px;
+    background: #f4f4f4;
+    padding: 8px 16px;
     border-radius: 12px;
     font-size: 14px;
     font-weight: 600;
+    color: #444;
 }
 
 /* --- FOOTER & BUTTON --- */
 .spot-footer {
+    margin-top: auto; /* Μαγική στοίχιση των κουμπιών στο ίδιο ύψος */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid #eee;
-    padding-top: 20px;
+    padding-top: 25px;
+    border-top: 1px dashed #eee;
+}
+
+.price-label {
+    display: block;
+    font-size: 11px;
+    color: #999;
+    text-transform: uppercase;
 }
 
 .price-amount {
-    font-size: 22px; /* Μεγάλη τιμή */
     font-weight: 700;
     color: #6f4e37;
+    font-size: 22px;
 }
 
 .btn-book-now {
     background: #2c1e16;
     color: white;
     padding: 15px 30px;
-    border-radius: 15px;
+    border-radius: 16px;
     text-decoration: none;
     font-size: 16px;
     font-weight: 700;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(44, 30, 22, 0.2);
 }
 
 .btn-book-now:hover {
     background: #d17a22;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(209, 122, 34, 0.3);
 }
 
-/* Badge */
+/* Badges (Προτείνεται κλπ) */
 .badge-popular {
     position: absolute;
     top: 20px;
     left: 20px;
     background: #ffc107;
-    padding: 8px 16px;
+    color: #000;
+    padding: 8px 18px;
     border-radius: 50px;
+    font-size: 13px;
     font-weight: 700;
-    font-size: 14px;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* --- RESPONSIVE ΓΙΑ ΚΙΝΗΤΑ --- */
+@media (max-width: 600px) {
+    .spots-grid-container {
+        padding: 30px 15px;
+    }
+    
+    .spot-info h3 {
+        font-size: 1.6rem;
+    }
+    
+    .spots-list {
+        grid-template-columns: 1fr; /* Μία κάρτα ανά σειρά στο κινητό */
+    }
 }
