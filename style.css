@@ -589,3 +589,57 @@ footer {
     color: #ffffff !important;           /* Το χρώμα του εικονιδίου */
     border: none !important;             /* Αφαιρεί τη γραμμή */
 }
+/* --- FLOATING HERO STATS --- */
+.hero-stats-floating {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.stat-circle {
+    width: 100px;
+    height: 100px;
+    background: rgba(44, 30, 22, 0.9); /* Σκούρο καφέ με λίγη διαφάνεια */
+    border: 2px solid #d17a22;        /* Πορτοκαλί περίγραμμα */
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    animation: floatAnim 3s infinite ease-in-out;
+}
+
+/* Διαφορετικός χρονισμός για να μην κουνιούνται όλα μαζί */
+.stat-circle:nth-child(2) { animation-delay: 0.5s; }
+.stat-circle:nth-child(3) { animation-delay: 1s; }
+
+.stat-circle .num {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #d17a22; /* Πορτοκαλί νούμερα */
+}
+
+.stat-circle .txt {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Animation για να "επιπλέουν" */
+@keyframes floatAnim {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Responsive για κινητά */
+@media (max-width: 600px) {
+    .stat-circle {
+        width: 85px;
+        height: 85px;
+    }
+    .stat-circle .num { font-size: 1.1rem; }
+}
