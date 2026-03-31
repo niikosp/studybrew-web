@@ -448,3 +448,25 @@ footer {
 .btn-popup:hover {
     background: #6f4e37;
 }
+/* --- SPECIAL NAV BUTTON --- */
+.nav-btn-special {
+    background-color: #d17a22;
+    color: white !important; /* Για να μην επηρεάζεται από τα άλλα links */
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-weight: 600 !important;
+    transition: 0.3s;
+}
+
+.nav-btn-special:hover {
+    background-color: #2c1e16;
+    transform: scale(1.05);
+}
+
+/* --- BUSINESS HERO VARIATION --- */
+.business-hero {
+    background: linear-gradient(rgba(44, 30, 22, 0.8), rgba(44, 30, 22, 0.8)), 
+                url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+}

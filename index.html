@@ -14,6 +14,7 @@
         <ul>
             <li><a href="#features">Λειτουργίες</a></li>
             <li><a href="about.html">About us</a></li>
+            <li><a href="for-cafes.html" class="nav-btn-special">Για Καφετέριες</a></li>
         </ul>
     </nav>
 
@@ -49,16 +50,16 @@
     </section>
 
     <section class="app-banner">
-    <div class="banner-container">
-        <div class="banner-content">
-            <span class="banner-badge">Mobile App</span>
-            <h2>StudyBrew app coming soon... 🚀</h2>
-            <p>Σύντομα διαθέσιμο σε IOS & Android.</p>
+        <div class="banner-container">
+            <div class="banner-content">
+                <span class="banner-badge">Mobile App</span>
+                <h2>StudyBrew app coming soon... 🚀</h2>
+                <p>Σύντομα διαθέσιμο σε IOS & Android.</p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-   <section class="how-it-works-arrows">
+    <section class="how-it-works-arrows">
         <div class="step-arrow-card">
             <div class="step-icon-wrapper">1</div>
             <h3>Κλείσε Θέση</h3>
@@ -105,6 +106,22 @@
             <p>Ειδικές τιμές σε καφέ και σνακ αποκλειστικά για τους χρήστες μας.</p>
         </div>
     </section>
+
+    <div id="email-popup" class="popup-overlay">
+        <div class="popup-content">
+            <button class="close-popup" id="close-popup">&times;</button>
+            <div class="popup-inner">
+                <span class="popup-icon">🚀</span>
+                <h2>Θέλεις να μαθαίνεις πρώτος για το app του StudyBrew;</h2>
+                <p>Δώσε μας το email σου και θα σε ενημερώσουμε μόλις κυκλοφορήσει!</p>
+                <form class="popup-form">
+                    <input type="email" placeholder="Το email σου εδώ..." required>
+                    <button type="submit" class="btn-popup">Εγγραφή</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2026 StudyBrew. Δημιουργήθηκε από φοιτητές για φοιτητές.</p>
         <div class="social-links">
@@ -125,44 +142,27 @@
             </a>
         </div>
     </footer>
-<div id="email-popup" class="popup-overlay">
-    <div class="popup-content">
-        <button class="close-popup" id="close-popup">&times;</button>
-        <div class="popup-inner">
-            <span class="popup-icon">🚀</span>
-            <h2>Θέλεις να μαθαίνεις πρώτος για το app του StudyBrew;</h2>
-            <p>Δώσε μας το email σου και θα σε ενημερώσουμε μόλις κυκλοφορήσει!</p>
-            <form class="popup-form">
-                <input type="email" placeholder="Το email σου εδώ..." required>
-                <button type="submit" class="btn-popup">Εγγραφή</button>
-            </form>
-        </div>
-    </div>
-</div>
 
-<script>
-    // Λειτουργία για να κλείνει το pop-up
-    const popup = document.getElementById('email-popup');
-    const closeBtn = document.getElementById('close-popup');
+    <script>
+        const popup = document.getElementById('email-popup');
+        const closeBtn = document.getElementById('close-popup');
 
-    closeBtn.addEventListener('click', () => {
-        popup.style.display = 'none';
-    });
-
-    // Κλείσιμο αν πατήσει ο χρήστης έξω από το κουτί
-    window.addEventListener('click', (e) => {
-        if (e.target === popup) {
+        closeBtn.addEventListener('click', () => {
             popup.style.display = 'none';
-        }
-    });
+        });
 
-    // Εμφάνιση μετά από 3 δευτερόλεπτα (προαιρετικό, αν θες να πετάγεται αμέσως το αφήνεις έτσι)
-    window.onload = () => {
-        setTimeout(() => {
-            popup.classList.add('active');
-        }, 2000);
-    };
-</script>
-    
+        window.addEventListener('click', (e) => {
+            if (e.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+
+        window.onload = () => {
+            setTimeout(() => {
+                popup.classList.add('active');
+            }, 2000);
+        };
+    </script>
+
 </body>
 </html>
