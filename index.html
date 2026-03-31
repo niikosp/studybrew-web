@@ -114,8 +114,11 @@
                 <span class="popup-icon">🚀</span>
                 <h2>Θέλεις να μαθαίνεις πρώτος για το app του StudyBrew;</h2>
                 <p>Δώσε μας το email σου και θα σε ενημερώσουμε μόλις κυκλοφορήσει!</p>
-                <form class="popup-form">
-                    <input type="email" placeholder="Το email σου εδώ..." required>
+                <form action="https://formspree.io/f/xaqljlzo" method="POST" class="popup-form">
+                     <input type="email" name="email" placeholder="Το email σου εδώ..." required>
+    
+                    <input type="hidden" name="_subject" value="New StudyBrew Subscriber!">
+    
                     <button type="submit" class="btn-popup">Εγγραφή</button>
                 </form>
             </div>
