@@ -494,3 +494,91 @@ footer {
     margin: 0 auto;
     border-radius: 2px;
 }
+/* --- 2. FEATURES MODERN (Τα νέα μικρά κουτάκια) --- */
+.features-modern {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Λίγο μικρότερο κενό */
+    padding: 40px 10%; /* Μικρότερο padding πάνω-κάτω */
+    background-color: #fff;
+    max-width: 1000px; /* Πιο στενό container για να "μαζέψουν" */
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.feature-card-new {
+    flex: 1;
+    min-width: 200px; /* Μικρότερο ελάχιστο πλάτος */
+    max-width: 280px; /* Μικρότερο μέγιστο πλάτος */
+    padding: 20px 15px; /* Λιγότερος εσωτερικός χώρος */
+    background: #ffffff;
+    border: 1px solid #efeae4; 
+    border-radius: 12px; /* Πιο μικρές γωνίες */
+    text-align: center;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 10px rgba(111, 78, 55, 0.04); /* Πιο απαλή σκιά */
+}
+
+.feature-card-new:hover {
+    transform: translateY(-5px); /* Μικρότερο "σήκωμα" στο hover */
+    border-color: #d17a22;
+    box-shadow: 0 8px 20px rgba(170, 6, 6, 0.08);
+}
+
+.icon-new {
+    width: 45px; /* Πιο μικρό εικονίδιο */
+    height: 45px;
+    background-color: #fdf8f3;
+    color: #d17a22;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px; /* Μικρότερο emoji */
+    margin: 0 auto 12px;
+    border: 1.5px solid #d17a22;
+}
+
+/* Πιο μικρά γράμματα μέσα στα κουτάκια */
+.feature-card-new h3 {
+    font-size: 1rem; /* Μικρότερος τίτλος */
+    color: #2c1e16;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.feature-card-new p {
+    font-size: 0.85rem; /* Μικρότερο κείμενο */
+    color: #666;
+    line-height: 1.4;
+}
+/* ΑΝΑΓΚΑΣΤΙΚΟ ΜΙΚΡΟ ΜΕΓΕΘΟΣ ΓΙΑ ΤΑ FEATURES */
+#features .step-arrow-card {
+    flex: 0 1 200px !important; /* Μην απλώνεσαι, μείνε στα 250px */
+    min-width: 200px !important;
+    max-width: 190px !important;
+    min-height: 150px !important; /* Πιο κοντό */
+    padding: 15px !important;
+    margin: 10px auto;
+}
+
+#features .step-icon-wrapper {
+    width: 45px !important;
+    height: 45px !important;
+    font-size: 20px !important;
+    margin-bottom: 12px !important;
+}
+
+#features h3 {
+    font-size: 1rem !important;
+}
+
+#features p {
+    font-size: 0.85rem !important;
+}
+
+/* Ευθυγράμμιση του container */
+#features {
+    justify-content: center !important;
+    gap: 20px !important;
+}
