@@ -1,4 +1,4 @@
-/* ---- ΓΕΝΙΚΕΣ ΡΥΘΜΙΣΕΙΣ ---- */
+/* --- ΓΕΝΙΚΕΣ ΡΥΘΜΙΣΕΙΣ --- */
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@ body {
     background-color: #fcfaf8;
 }
 
-/* Navigation */
+/* --- NAVIGATION --- */
 nav {
     display: flex;
     justify-content: space-between;
@@ -28,34 +28,41 @@ nav {
 .logo {
     font-size: 24px;
     font-weight: 600;
-    color: #6f4e37; /* Coffee Brown */
+    color: #6f4e37;
 }
 
 .logo span { color: #d17a22; }
 
 nav ul { display: flex; list-style: none; }
 nav ul li { margin-left: 20px; }
-nav ul li a { text-decoration: none; color: #333; font-weight: 400; transition: 0.3s; }
+nav ul li a { 
+    text-decoration: none; 
+    color: #333; 
+    font-weight: 400;
+    transition: 0.3s; 
+}
 nav ul li a:hover { color: #d17a22; }
 
-/* Hero Section */
+/* --- HERO SECTION --- */
 .hero {
     height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1350&q=80');
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
     background-position: center;
     color: white;
     padding: 0 20px;
 }
 
-.hero h1 { font-size: 3rem; margin-bottom: 20px; }
+.hero h1 { font-size: 3rem; margin-bottom: 10px; }
 .hero h1 span { color: #d17a22; }
+.hero p { margin-bottom: 5px; }
 
-/* --- SPOTS CIRCLE BUTTON --- */
+/* --- Ο ΚΥΚΛΟΣ "ΔΕΣ ΤΑ STUDY SPOTS" --- */
 .spots-circle-container {
     margin-top: 40px;
     display: flex;
@@ -64,8 +71,8 @@ nav ul li a:hover { color: #d17a22; }
 }
 
 .spots-circle-btn {
-    width: 110px;
-    height: 110px;
+    width: 130px;
+    height: 130px;
     background-color: #d17a22;
     color: white;
     border-radius: 50%;
@@ -74,77 +81,132 @@ nav ul li a:hover { color: #d17a22; }
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    box-shadow: 0 8px 20px rgba(209, 122, 34, 0.3);
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.2;
+    box-shadow: 0 10px 25px rgba(209, 122, 34, 0.4);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    animation: bounce 2s infinite;
+    animation: bounceCircle 2s infinite;
+    border: none;
+    cursor: pointer;
 }
 
 .spots-circle-btn:hover {
     background-color: #6f4e37;
-    transform: scale(1.15) rotate(5deg);
-    box-shadow: 0 12px 25px rgba(111, 78, 55, 0.4);
-    animation: none;
+    transform: scale(1.1) rotate(5deg);
 }
 
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-    40% {transform: translateY(-12px);}
-    60% {transform: translateY(-6px);}
+@keyframes bounceCircle {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-15px); }
+    60% { transform: translateY(-7px); }
 }
+
+.circle-icon { font-size: 28px; margin-bottom: 5px; }
+.circle-text { font-size: 14px; }
 
 /* --- REWARDS SECTION --- */
-.rewards-section {
-    padding: 60px 20px;
-    background-color: #fff;
-}
-
+.rewards-section { padding: 60px 10%; }
 .rewards-box {
-    background: linear-gradient(135deg, #ffffff 0%, #f4b907 100%);
-    color: #000;
-    padding: 40px 50px;
-    border-radius: 20px;
     display: flex;
-    justify-content: space-between;
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
     align-items: center;
-    border: 2px solid #000;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    max-width: 900px;
+    justify-content: space-between;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    max-width: 1100px;
     margin: 0 auto;
 }
 
-.rewards-box:hover { transform: translateY(-5px); }
-
 .btn-rewards {
-    padding: 12px 28px;
-    background-color: #000;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: 700;
-    transition: 0.3s;
     display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #d17a22;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-.btn-rewards:hover {
-    background-color: #fff;
-    color: #000;
-}
+.rewards-icon-img { width: 180px; border-radius: 15px; }
 
-/* --- SPOTS GRID SYSTEM --- */
-.spots-grid-container {
+/* --- UNIFIED HOW IT WORKS & FEATURES (BOXES WITH ARROWS) --- */
+.how-it-works-arrows, .features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
     padding: 60px 10%;
-}
-
-.spots-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 35px;
+    background-color: #fff;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* --- PREMIUM SPOT CARDS & HOVER EFFECTS --- */
+.step-arrow-card, .feature-card {
+    flex: 1;
+    padding: 30px;
+    background: #fdfbf7;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border: 1px solid #e0d5c1;
+    transition: 0.3s;
+    text-align: center;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step-arrow-card:hover, .feature-card:hover {
+    transform: translateY(-8px);
+    border-color: #d17a22;
+}
+
+.step-icon-wrapper, .step-number {
+    width: 65px;
+    height: 65px;
+    background-color: #d17a22;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border: 3px solid #000;
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+}
+
+.flow-arrow {
+    font-size: 30px;
+    color: #d17a22;
+    font-weight: bold;
+    animation: moveArrow 2s infinite ease-in-out;
+}
+
+@keyframes moveArrow {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+}
+
+/* --- STUDY SPOTS CARDS --- */
+.spots-grid-container {
+    padding: 60px 10%;
+    width: 100%;
+}
+
+.spots-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .spot-card {
     background: white;
     border-radius: 20px;
@@ -154,118 +216,73 @@ nav ul li a:hover { color: #d17a22; }
     display: flex;
     flex-direction: column;
     position: relative;
-    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
-                box-shadow 0.3s ease, 
-                background-color 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
 }
 
 .spot-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-    z-index: 10;
-    background-color: rgba(255, 255, 255, 0.98);
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    border-color: #d17a22;
 }
 
 .spot-image {
-    height: 230px;
+    height: 220px;
     width: 100%;
     background-size: cover;
     background-position: center;
     transition: transform 0.5s ease;
 }
 
-.spot-card:hover .spot-image {
-    transform: scale(1.05);
-}
-
-.spot-info {
-    padding: 25px;
-    flex-grow: 1;
-}
-
-.spot-header-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.spot-info h3 { font-size: 1.5rem; color: #2c1e16; }
-
-/* Amenities Style */
-.spot-amenities {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 15px 0;
-}
-
-.spot-amenities span {
-    background: #f0f0f0;
-    padding: 6px 12px;
-    border-radius: 8px;
-    font-size: 12px;
-    font-weight: 600;
-    color: #555;
-    display: inline-block;
-}
-
-/* Footer & Button */
-.spot-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 15px;
-    border-top: 1px dashed #ddd;
-    margin-top: auto;
-}
-
-.price-amount { font-weight: 700; color: #6f4e37; font-size: 18px; }
+.spot-card:hover .spot-image { transform: scale(1.05); }
 
 .btn-book-now {
     background: #2c1e16;
     color: white;
     padding: 10px 20px;
-    border-radius: 8px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: 600;
+    text-align: center;
     transition: 0.3s;
 }
 
-.btn-book-now:hover {
-    background: #d17a22;
-    transform: scale(1.05);
-}
-
-.badge-popular {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background: #ffc107;
-    color: #000;
-    padding: 5px 12px;
-    border-radius: 50px;
-    font-size: 11px;
-    font-weight: 700;
-    z-index: 20;
-}
+.btn-book-now:hover { background: #d17a22; }
 
 /* --- FOOTER --- */
 footer {
     text-align: center;
-    padding: 40px;
+    padding: 60px;
     background-color: #f4f1ee;
 }
 
-.social-icon-img {
-    width: 33px;
-    height: 33px;
-    margin: 0 10px;
-    transition: 0.3s;
-    opacity: 0.7;
+.social-links {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-.social-icon-img:hover {
-    transform: translateY(-5px) scale(1.1);
-    opacity: 1;
+.social-icon-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .how-it-works-arrows, .features { 
+        flex-direction: column; 
+        gap: 30px; 
+    }
+    .flow-arrow { 
+        transform: rotate(90deg); 
+        animation: moveArrowVertical 2s infinite ease-in-out;
+    }
+    .hero h1 { font-size: 2.2rem; }
+}
+
+@keyframes moveArrowVertical {
+    0%, 100% { transform: rotate(90deg) translateX(0); }
+    50% { transform: rotate(90deg) translateX(10px); }
 }
