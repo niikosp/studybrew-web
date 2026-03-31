@@ -222,17 +222,72 @@
 </section>
 <section class="final-cta" id="contact">
     <div class="cta-box">
-        <h2>Έτοιμοι να γεμίσετε τα τραπέζια σας;</h2>
-        <p>Αφήστε τα στοιχεία σας και θα επικοινωνήσουμε μαζί σας εντός 24 ωρών για να σας δείξουμε την πλατφόρμα.</p>
-        
-        <form class="biz-form">
-            <input type="text" placeholder="Όνομα Καφετέριας" required>
-            <input type="email" placeholder="Email Επικοινωνίας" required>
-            <input type="tel" placeholder="Τηλέφωνο (Προαιρετικό)">
-            <button type="submit" class="submit-btn">ΑΠΟΣΤΟΛΗ ΕΚΔΗΛΩΣΗΣ ΕΝΔΙΑΦΕΡΟΝΤΟΣ</button>
-        </form>
+        <div id="form-wrapper">
+            <h2>Ready to fill your tables?</h2>
+            <p id="form-description">Leave your details and we will contact you within 24 hours.</p>
+            
+            <form id="my-form" action="https://formspree.io/f/xaqljlzo" method="POST" class="biz-form">
+                <input type="text" name="cafe_name" placeholder="Cafe Name" required>
+                <input type="email" name="email" placeholder="Work Email" required>
+                <input type="tel" name="phone" placeholder="Phone Number (Optional)">
+                
+                <button type="submit" id="submit-btn" class="submit-btn">JOIN THE NETWORK</button>
+            </form>
+
+            <div id="status-message" style="display:none; padding: 40px 0;">
+                <div class="check-icon" style="width: 70px; height: 70px; background: #d17a22; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 30px;">✓</div>
+                <h3 style="color: #2c1e16; font-size: 24px;">Application Received!</h3>
+                <p>We'll be in touch soon.</p>
+            </div>
+        </div>
     </div>
 </section>
+
+<script>
+  var form = document.getElementById("my-form");
+  
+  async function handleSubmit(event) {
+    event.preventDefault(); // Εμποδίζει τη σελίδα να κάνει reload
+    var status = document.getElementById("status-message");
+    var formWrapper = document.getElementById("my-form");
+    var desc = document.getElementById("form-description");
+    var btn = document.getElementById("submit-btn");
+    
+    // Δημιουργία των δεδομένων της φόρμας
+    var data = new FormData(event.target);
+    
+    btn.innerHTML = "Sending...";
+    btn.disabled = true;
+
+    // Αποστολή στο Formspree
+    fetch(event.target.action, {
+      method: 'POST',
+      body: data,
+      headers: {
+          'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        // Αν όλα πήγαν καλά:
+        formWrapper.style.display = "none";
+        desc.style.display = "none";
+        status.style.display = "block";
+      } else {
+        // Αν το Formspree βγάλει σφάλμα:
+        alert("Oops! There was a problem. Please try again.");
+        btn.innerHTML = "JOIN THE NETWORK";
+        btn.disabled = false;
+      }
+    }).catch(error => {
+      // Αν υπάρχει πρόβλημα σύνδεσης:
+      alert("Error connecting to the server. Check your internet.");
+      btn.innerHTML = "JOIN THE NETWORK";
+      btn.disabled = false;
+    });
+  }
+
+  form.addEventListener("submit", handleSubmit);
+</script>
         <p>&copy; 2026 StudyBrew. Grow your business with us.</p>
         <div class="social-links">
             <a href="mailto: studybrew.app@gmail.com" target="_blank">
