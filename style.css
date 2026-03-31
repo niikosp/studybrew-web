@@ -470,3 +470,27 @@ footer {
     background-size: cover;
     background-position: center;
 }
+/* --- BENEFITS TITLE STYLE --- */
+.benefits-title {
+    text-align: center;
+    padding-top: 60px;
+    background-color: #fcfaf8;
+}
+
+.benefits-title h2 {
+    font-size: 2.2rem;
+    color: #2c1e16;
+    margin-bottom: 10px;
+}
+
+.benefits-title h2 span {
+    font-size: 1.8rem;
+}
+
+.title-underline {
+    width: 80px;
+    height: 4px;
+    background-color: #d17a22;
+    margin: 0 auto;
+    border-radius: 2px;
+}
