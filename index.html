@@ -125,6 +125,44 @@
             </a>
         </div>
     </footer>
+<div id="email-popup" class="popup-overlay">
+    <div class="popup-content">
+        <button class="close-popup" id="close-popup">&times;</button>
+        <div class="popup-inner">
+            <span class="popup-icon">🚀</span>
+            <h2>Θέλεις να μαθαίνεις πρώτος για το app του StudyBrew;</h2>
+            <p>Δώσε μας το email σου και θα σε ενημερώσουμε μόλις κυκλοφορήσει!</p>
+            <form class="popup-form">
+                <input type="email" placeholder="Το email σου εδώ..." required>
+                <button type="submit" class="btn-popup">Εγγραφή</button>
+            </form>
+        </div>
+    </div>
+</div>
 
+<script>
+    // Λειτουργία για να κλείνει το pop-up
+    const popup = document.getElementById('email-popup');
+    const closeBtn = document.getElementById('close-popup');
+
+    closeBtn.addEventListener('click', () => {
+        popup.style.display = 'none';
+    });
+
+    // Κλείσιμο αν πατήσει ο χρήστης έξω από το κουτί
+    window.addEventListener('click', (e) => {
+        if (e.target === popup) {
+            popup.style.display = 'none';
+        }
+    });
+
+    // Εμφάνιση μετά από 3 δευτερόλεπτα (προαιρετικό, αν θες να πετάγεται αμέσως το αφήνεις έτσι)
+    window.onload = () => {
+        setTimeout(() => {
+            popup.classList.add('active');
+        }, 2000);
+    };
+</script>
+    
 </body>
 </html>
