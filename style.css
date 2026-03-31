@@ -955,3 +955,63 @@ footer {
     .comp-wrapper { flex-direction: column; }
     .brew-way { border-left: none; border-top: 5px solid #d17a22; }
 }
+/* --- STYLE ΓΙΑ ΤΗ ΦΟΡΜΑ ΕΠΙΚΟΙΝΩΝΙΑΣ --- */
+.final-cta {
+    padding: 80px 10%;
+    background-color: #fdf8f3; /* Απαλό φόντο που ταιριάζει με το πορτοκαλί */
+    text-align: center;
+}
+
+.cta-box {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-box h2 {
+    color: #2c1e16; /* Σκούρο Καφέ */
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.cta-box p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.biz-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.biz-form input {
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px solid #efeae4;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+.biz-form input:focus {
+    border-color: #d17a22; /* Πορτοκαλί περίγραμμα όταν γράφεις */
+    box-shadow: 0 0 8px rgba(209, 122, 34, 0.1);
+}
+
+.submit-btn {
+    padding: 18px;
+    background-color: #d17a22; /* Πορτοκαλί κουμπί */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #2c1e16; /* Γίνεται σκούρο καφέ στο hover */
+    transform: translateY(-2px);
+}
