@@ -850,3 +850,108 @@ footer {
 .faq-answer strong {
     color: #d17a22; /* Έμφαση στο κείμενο με Πορτοκαλί */
 }
+/* --- COMPARISON STYLE --- */
+.comparison-section {
+    padding: 80px 10%;
+    background-color: #fff;
+}
+
+.comp-wrapper {
+    display: flex;
+    align-items: stretch; /* Για να έχουν το ίδιο ύψος */
+    justify-content: center;
+    gap: 0; /* Τα κολλάμε για να φαίνεται η αντίθεση */
+    max-width: 1000px;
+    margin: 50px auto 0;
+    border-radius: 25px;
+    overflow: hidden; /* Για να φαίνονται οι γωνίες στρογγυλές */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.comp-card {
+    flex: 1;
+    padding: 50px 40px;
+    position: relative;
+}
+
+/* Η "Παλιά" Πλευρά (Γκρι/Απαλό) */
+.old-way {
+    background-color: #f8f9fa;
+    color: #888;
+}
+
+.old-way .comp-header {
+    color: #666;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.old-way .icon { color: #ff6b6b; margin-right: 10px; font-weight: bold; }
+
+/* Η Πλευρά StudyBrew (Σκούρο Καφέ & Πορτοκαλί) */
+.brew-way {
+    background-color: #2c1e16; /* Σκούρο Καφέ */
+    color: #fff;
+    border-left: 4px solid #d17a22; /* Πορτοκαλί διαχωριστικό */
+}
+
+.brew-way .comp-header {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.brew-way .icon { color: #d17a22; margin-right: 10px; font-weight: bold; }
+
+/* Το Badge "Η ΛΥΣΗ" */
+.comp-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #d17a22;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* Λίστα */
+.comp-list {
+    list-style: none;
+    padding: 0;
+}
+
+.comp-list li {
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Κουμπί μέσα στην κάρτα */
+.comp-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 30px;
+    background: #d17a22;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.comp-btn:hover {
+    background: #fff;
+    color: #2c1e16;
+}
+
+/* Responsive για κινητά */
+@media (max-width: 850px) {
+    .comp-wrapper { flex-direction: column; }
+    .brew-way { border-left: none; border-top: 5px solid #d17a22; }
+}
