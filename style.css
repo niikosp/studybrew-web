@@ -784,3 +784,69 @@ footer {
     font-family: serif;
     z-index: 0;
 }
+/* --- FAQ SECTION --- */
+.faq-section {
+    padding: 80px 10%;
+    background-color: #fff;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 40px auto 0;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border: 1px solid #efeae4;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.faq-item:hover {
+    border-color: #d17a22; /* Πορτοκαλί περίγραμμα στο hover */
+    box-shadow: 0 5px 15px rgba(111, 78, 55, 0.05);
+}
+
+.faq-question {
+    padding: 20px 25px;
+    background-color: #fdfbf7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Η Ερώτηση - Σκούρο Καφέ */
+.faq-question h3 {
+    font-size: 1.05rem;
+    color: #2c1e16; /* Σκούρο Καφέ */
+    font-weight: 600;
+}
+
+/* Το Σύμβολο + - Πορτοκαλί */
+.faq-toggle {
+    color: #d17a22; /* Πορτοκαλί */
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.faq-answer {
+    padding: 0 25px 20px;
+    background-color: #fdfbf7;
+    display: none; /* Αν θέλεις να ανοίγει με JavaScript */
+    /* Για τώρα, αφαίρεσε το display: none αν θες να φαίνονται όλα */
+}
+
+/* Προσωρινά τα εμφανίζουμε όλα - Αν βάλεις JS, αφαίρεσε την από κάτω γραμμή */
+.faq-answer { display: block; }
+
+.faq-answer p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.faq-answer strong {
+    color: #d17a22; /* Έμφαση στο κείμενο με Πορτοκαλί */
+}
