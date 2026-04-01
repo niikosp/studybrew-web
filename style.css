@@ -1073,3 +1073,44 @@ footer {
     background-color: #d17a22;
     transform: translateY(-2px);
 }
+
+
+/* --- CONTACT NAV BUTTON --- */
+#contact-trigger {
+    background-color: #6f4e37; /* Coffee brown */
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+#contact-trigger:hover {
+    background-color: #d17a22; /* Orange on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(209, 122, 34, 0.2);
+}
+
+/* Ensure the popup is hidden by default in your CSS */
+.popup-overlay {
+    display: none; /* Change from flex to none to prevent it showing on load */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease;
+}
+
+.popup-overlay.active {
+    display: flex; /* Show as flex only when active */
+    opacity: 1;
+    visibility: visible;
+}

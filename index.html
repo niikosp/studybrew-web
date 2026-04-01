@@ -6,14 +6,42 @@
     <title>StudyBrew | Book your Study Spot</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Essential CSS fix to ensure the button works with the popup */
+        #email-popup {
+            display: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease;
+        }
+        #email-popup.active {
+            display: flex !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        #contact-trigger {
+            background-color: #6f4e37;
+            color: white !important;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        #contact-trigger:hover {
+            background-color: #d17a22;
+        }
+    </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo">Study<span>Brew</span></div>
+        <div class="logo">Study<span>brew</span></div>
         <ul>
             <li><a href="#features">Λειτουργίες</a></li>
             <li><a href="about.html">About us</a></li>
+            <li><a href="javascript:void(0)" id="contact-trigger">Επικοινωνία</a></li>
             <li><a href="for-cafes.html" class="nav-btn-special">Για Καφετέριες</a></li>
         </ul>
     </nav>
@@ -71,7 +99,7 @@
         <div class="step-arrow-card">
             <div class="step-icon-wrapper">2</div>
             <h3>Διάβασε</h3>
-            <p>Κάνε check-in και μάζεψε "Study Points" για κάθε ώρα συγκεντρωμένου διαβάσματος.</p>
+            <p>Κάνε check-in και μάζεψε Study Points για κάθε ώρα συγκεντρωμένου διαβάσματος.</p>
         </div>
 
         <div class="flow-arrow">➜</div>
@@ -83,25 +111,24 @@
         </div>
     </section>
 
-  <section id="features" class="features">
-    <div class="step-arrow-card">
-        <div class="step-icon-wrapper">📍</div>
-        <h3>Κοντά σου</h3>
-        <p>Βρες τραπέζι στη γειτονιά σου σε λιγότερο από 10 λεπτά.</p>
-    </div>
+    <section id="features" class="features">
+        <div class="step-arrow-card">
+            <div class="step-icon-wrapper">📍</div>
+            <h3>Κοντά σου</h3>
+            <p>Βρες τραπέζι στη γειτονιά σου σε λιγότερο από 10 λεπτά.</p>
+        </div>
 
-    <div class="step-arrow-card">
-        <div class="step-icon-wrapper">🕒</div>
-        <h3>3-Hour Slots</h3>
-        <p>Κλείσε το spot σου για 3 ώρες παραγωγικού διαβάσματος.</p>
-    </div>
+        <div class="step-arrow-card">
+            <div class="step-icon-wrapper">🕒</div>
+            <h3>3-Hour Slots</h3>
+            <p>Κλείσε το spot σου για 3 ώρες παραγωγικού διαβάσματος.</p>
+        </div>
 
-    <div class="step-arrow-card">
-        <div class="step-icon-wrapper">☕</div>
-        <h3>Study Packages</h3>
-        <p>Ειδικές τιμές σε καφέ και σνακ για τους χρήστες μας.</p>
-    </div>
-</section>
+        <div class="step-arrow-card">
+            <div class="step-icon-wrapper">☕</div>
+            <h3>Study Packages</h3>
+            <p>Ειδικές τιμές σε καφέ και σνακ για τους χρήστες μας.</p>
+        </div>
     </section>
 
     <div id="email-popup" class="popup-overlay">
@@ -113,9 +140,7 @@
                 <p>Δώσε μας το email σου και θα σε ενημερώσουμε μόλις κυκλοφορήσει!</p>
                 <form action="https://formspree.io/f/xaqljlzo" method="POST" class="popup-form">
                      <input type="email" name="email" placeholder="Το email σου εδώ..." required>
-    
                     <input type="hidden" name="_subject" value="New StudyBrew Subscriber!">
-    
                     <button type="submit" class="btn-popup">Εγγραφή</button>
                 </form>
             </div>
@@ -143,77 +168,7 @@
         </div>
     </footer>
 
-  <script>
-    const popup = document.getElementById('email-popup');
-    const closeBtn = document.getElementById('close-popup');
-    const form = popup.querySelector('form');
-
-    // Λειτουργία για το κλείσιμο του popup
-    const closePopup = () => {
-        popup.style.display = 'none';
-        popup.classList.remove('active');
-        // Προαιρετικά: αποθήκευση στο browser για να μην ξαναβγεί σήμερα
-        localStorage.setItem('popupClosed', 'true');
-    };
-
-    closeBtn.addEventListener('click', closePopup);
-
-    window.addEventListener('click', (e) => {
-        if (e.target === popup) {
-            closePopup();
-        }
-    });
-
-    window.onload = () => {
-        if (!localStorage.getItem('popupClosed')) {
-            setTimeout(() => {
-                popup.classList.add('active');
-            }, 2000);
-        }
-    };
-
-    // Η ΜΑΓΕΙΑ: Αποστολή χωρίς αλλαγή σελίδας
-    form.addEventListener("submit", async function(event) {
-        event.preventDefault(); // Σταματάει το redirect στο "thanks" page
-        
-        const status = form.querySelector('.btn-popup');
-        const data = new FormData(event.target);
-        
-        status.innerHTML = "Στέλνεται...";
-        status.disabled = true;
-
-        fetch(event.target.action, {
-            method: form.method,
-            body: data,
-            headers: {
-                'Accept': 'application/json'
-            }
-        }).then(response => {
-            if (response.ok) {
-                // Αν όλα πήγαν καλά
-                status.innerHTML = "Επιτυχία! 🎉";
-                setTimeout(() => {
-                    closePopup();
-                }, 1500);
-            } else {
-                // Αν υπήρξε πρόβλημα
-                response.json().then(data => {
-                    if (Object.hasOwn(data, 'errors')) {
-                        alert(data["errors"].map(error => error["message"]).join(", "));
-                    } else {
-                        alert("Ωχ! Κάτι πήγε στραβά στην υποβολή.");
-                    }
-                    status.innerHTML = "Εγγραφή";
-                    status.disabled = false;
-                })
-            }
-        }).catch(error => {
-            alert("Σφάλμα σύνδεσης. Δοκίμασε ξανά.");
-            status.innerHTML = "Εγγραφή";
-            status.disabled = false;
-        });
-    });
-</script>
-
+    
+   <script src="script.js"></script>
 </body>
 </html>
