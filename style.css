@@ -1196,3 +1196,121 @@ footer {
         height: 35px;
     }
 }
+/* --- UNIVERSAL MOBILE RESPONSIVE (iOS & Android) --- */
+
+@media (max-width: 768px) {
+    /* 1. Navbar: Στοίχιση σε στήλη για να μην στριμώχνονται τα κουμπιά */
+    nav {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 15px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap; /* Επιτρέπει στα κουμπιά να αλλάζουν γραμμή αν είναι πολλά */
+        justify-content: center;
+        gap: 10px;
+    }
+
+    /* 2. Hero Section: Διόρθωση μεγέθους για να μην βγαίνει εκτός οθόνης */
+    .hero {
+        padding: 60px 20px;
+        min-height: auto;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem; /* Πιο μαζεμένο για μικρές οθόνες */
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    /* 3. Cards & Steps: Από οριζόντια σε κάθετη διάταξη */
+    .how-it-works-arrows, 
+    .features, 
+    .biz-steps-container,
+    .how-it-works-business {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 30px 15px;
+    }
+
+    /* Τα βέλη γυρνάνε προς τα κάτω */
+    .flow-arrow {
+        transform: rotate(90deg);
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    .step-arrow-card, .biz-step-card {
+        width: 100%;
+        max-width: 320px; /* Ιδανικό μέγεθος για iPhone SE και μικρά Android */
+        margin: 0 auto;
+    }
+
+    /* 4. Forms: Σημαντικό για iOS (iPhone) */
+    .biz-form input, 
+    .popup-form input {
+        width: 100%;
+        font-size: 16px !important; /* ΣΤΑΜΑΤΑΕΙ το ενοχλητικό αυτόματο zoom του iPhone */
+        padding: 12px;
+        margin-bottom: 10px;
+    }
+
+    .submit-btn, .btn-popup {
+        width: 100%; /* Το κουμπί πιάνει όλο το πλάτος για να πατιέται εύκολα με τον αντίχειρα */
+        padding: 15px;
+    }
+
+    /* 5. FAQ Section */
+    .faq-container {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .faq-question h3 {
+        font-size: 0.95rem;
+    }
+
+    /* 6. Footer: Μεγάλα εικονίδια για εύκολο κλικ */
+    .social-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .social-icon-img {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* 7. Popup: Να μην κολλάει στις άκρες της οθόνης */
+    .popup-content {
+        width: 90% !important;
+        padding: 20px;
+        border-radius: 15px;
+    }
+}
+
+/* Για ΠΟΛΥ μικρά κινητά (iPhone SE, παλιά Android) */
+@media (max-width: 380px) {
+    .hero h1 {
+        font-size: 1.4rem;
+    }
+    
+    nav ul {
+        gap: 5px;
+    }
+
+    .nav-btn-special, #contact-trigger {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
