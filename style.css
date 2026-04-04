@@ -1314,3 +1314,55 @@ footer {
         padding: 6px 10px;
     }
 }
+/* --- ΔΙΑΤΑΞΗ ΜΕΝΟΥ ΓΙΑ ΚΙΝΗΤΑ (2 ΣΕΙΡΕΣ) --- */
+
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column; /* Το ένα κάτω από το άλλο */
+        align-items: center;
+        padding: 15px 10px;
+        gap: 15px;
+    }
+
+    /* Το Logo μόνο του πάνω */
+    .logo {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+
+    /* Το <ul> γίνεται Grid για να ορίσουμε ακριβώς τις σειρές */
+    nav ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Δύο ίσες στήλες */
+        gap: 10px;
+        width: 100%;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    /* Τα κουμπιά να πιάνουν όλο το χώρο του κελιού τους */
+    nav ul li a {
+        display: block;
+        text-align: center;
+        padding: 10px 5px;
+        font-size: 13px;
+        background: #f8f8f8; /* Ελαφρύ φόντο για να φαίνονται σαν κουμπιά */
+        border-radius: 8px;
+        border: 1px solid #eee;
+    }
+
+    /* Ειδικό στυλ για τα κύρια κουμπιά (Για Καφετέριες & Επικοινωνία) */
+    .nav-btn-special, #contact-trigger {
+        background-color: #6f4e37 !important;
+        color: white !important;
+        font-weight: 600;
+    }
+
+    /* Σειρά 1: Για Καφετέριες & Επικοινωνία (θα τα βάλουμε πρώτα στο Grid) */
+    /* Αν θέλεις συγκεκριμένη σειρά, μπορούμε να χρησιμοποιήσουμε το order */
+}
