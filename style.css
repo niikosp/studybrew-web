@@ -1114,3 +1114,85 @@ footer {
     opacity: 1;
     visibility: visible;
 }
+/* --- MOBILE RESPONSIVE STYLE --- */
+
+@media (max-width: 768px) {
+    /* 1. Navbar: Το logo και το μενού να μπαίνουν σε στήλη */
+    nav {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap; /* Επιτρέπει στα κουμπιά να αλλάζουν γραμμή αν δεν χωράνε */
+        justify-content: center;
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .nav-btn-special, #contact-trigger {
+        padding: 6px 15px;
+        font-size: 13px;
+    }
+
+    /* 2. Hero Section: Μικρότερα γράμματα για να μην πιάνουν όλη την οθόνη */
+    .hero h1 {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    /* 3. Steps & Features: Από οριζόντια, γίνονται κάθετα */
+    .how-it-works-arrows, 
+    .features, 
+    .biz-steps-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .flow-arrow {
+        transform: rotate(90deg); /* Το βέλος δείχνει προς τα κάτω αντί για δεξιά */
+        margin: 10px 0;
+    }
+
+    .step-arrow-card, .biz-step-card {
+        width: 90%; /* Πιάνουν όλο το πλάτος του κινητού */
+        max-width: 350px;
+    }
+
+    /* 4. Φόρμα: Πιο άνετα περιθώρια */
+    .cta-box {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .biz-form input {
+        font-size: 16px; /* Εμποδίζει το αυτόματο zoom στο iPhone */
+    }
+
+    /* 5. Popup: Να χωράει στην οθόνη του κινητού */
+    .popup-content {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .popup-inner h2 {
+        font-size: 18px;
+    }
+
+    /* 6. Footer: Τα social links να είναι πιο μεγάλα για να πατιούνται εύκολα */
+    .social-links {
+        gap: 20px;
+    }
+    
+    .social-icon-img {
+        width: 35px;
+        height: 35px;
+    }
+}
