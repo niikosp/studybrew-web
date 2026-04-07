@@ -1371,3 +1371,38 @@ footer {
     /* Σειρά 1: Για Καφετέριες & Επικοινωνία (θα τα βάλουμε πρώτα στο Grid) */
     /* Αν θέλεις συγκεκριμένη σειρά, μπορούμε να χρησιμοποιήσουμε το order */
 }
+/* --- ΕΥΘΥΓΡΑΜΜΙΣΗ ΚΟΥΜΠΙΟΥ ΣΤΑ ΔΕΞΙΑ --- */
+.spot-footer {
+    display: flex;             /* Ενεργοποιεί το Flexbox */
+    justify-content: space-between; /* Σπρώχνει τα περιεχόμενα στις δύο άκρες */
+    align-items: center;       /* Τα ευθυγραμμίζει κάθετα στο κέντρο */
+    padding: 15px 20px;        /* Δίνει λίγο "αέρα" εσωτερικά */
+    border-top: 1px solid #eee; /* Προαιρετικό: μια διακριτική γραμμή πάνω από το footer */
+}
+
+.price-info {
+    display: flex;
+    flex-direction: column;    /* Βάζει το "Ελάχιστη κατανάλωση" πάνω από το "-" */
+    text-align: left;
+}
+
+.btn-book-now {
+    margin-left: 20px;         /* Εξασφαλίζει ότι δεν θα κολλήσει πάνω στην τιμή */
+    white-space: nowrap;       /* Εμποδίζει το κείμενο να αλλάξει γραμμή */
+}
+@media (max-width: 480px) {
+    .spot-footer {
+        flex-direction: column; /* Σε μικρά κινητά μπαίνουν το ένα κάτω από το άλλο */
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .price-info {
+        text-align: center;
+    }
+    
+    .btn-book-now {
+        width: 100%; /* Το κουμπί πιάνει όλο το πλάτος στο κινητό */
+        margin-left: 0;
+    }
+}
