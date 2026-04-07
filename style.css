@@ -1114,6 +1114,11 @@ footer {
     opacity: 1;
     visibility: visible;
 }
+
+
+
+
+
 /* --- MOBILE RESPONSIVE STYLE --- */
 
 @media (max-width: 768px) {
