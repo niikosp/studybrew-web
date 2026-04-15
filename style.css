@@ -51,7 +51,7 @@ nav ul li a:hover { color: #d17a22; }
     justify-content: center;
     text-align: center;
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1350&q=80');
+url('images/image_main_page.jpg');
     background-size: cover;
     background-position: center;
     color: white;
