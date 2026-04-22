@@ -83,7 +83,7 @@
         <a href="index.html" class="logo">Study<span>brew</span></a>
         <ul>
             <li><a href="for-cafes.html" class="nav-btn-special">Για Καφετέριες</a></li>
-            <li><a href="javascript:void(0)" id="contact-trigger">Επικοινωνία</a></li>
+            <li><a href="#contact" id="contact-trigger">Επικοινωνία</a></li>
     
             <li><a href="#features">Λειτουργίες</a></li>
             <li><a href="about.html">About us</a></li>
@@ -174,6 +174,29 @@
             </div>
         </div>
     </div>
+
+      <section class="final-cta" id="contact">
+        <div class="cta-box">
+            <div id="form-wrapper">
+                <h2>Κάνε εγγραφή τώρα!</h2>
+                <p id="form-description">Αφήστε τα στοιχεία σας και θα επικοινωνήσουμε μαζί σας.</p>
+                
+                <form id="my-form" action="https://formspree.io/f/xaqljlzo" method="POST" class="biz-form">
+                    <input type="text" name="cafe_name" placeholder="Email" required>
+                    <input type="email" name="email" placeholder="FIrst/Last Name" (Optional)>
+                    <input type="tel" name="phone" placeholder="Phone Number (Optional)">
+                    <button type="submit" id="submit-btn" class="submit-btn">Γίνε μέλος του δικτύου μας</button>
+                </form>
+
+                <div id="status-message" style="display:none; padding: 40px 0;">
+                    <div class="check-icon" style="width: 70px; height: 70px; background: #d17a22; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 30px;">✓</div>
+                    <h3 style="color: #2c1e16; font-size: 24px;">Application Received!</h3>
+                    <p>We'll be in touch soon.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <footer>
         <p>&copy; 2026 Studybrew. Δημιουργήθηκε από φοιτητές για φοιτητές.</p>
