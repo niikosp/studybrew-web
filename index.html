@@ -1,12 +1,46 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FJTVTQZW7K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FJTVTQZW7K');
+</script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studybrew ☕ | Book your Study Spot</title>
+
+
+    <!--LINK PREVIEW-->
+    <meta property="og:title" content="Studybrew ☕ | Book your Study Spot">
+    <meta property="og:description" content="Κλείσε ατομικά ή ομαδικά spots στα καλύτερα study-friendly cafes της πόλης.">
+    <meta property="og:image" content="https://studybrew.gr/images/image_main_page.jpg"> <meta property="og:url" content="https://studybrew.gr">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Studybrew ☕">
+    <meta name="twitter:description" content="Book your Study Spot.">
+    <meta name="twitter:image" content="https://studybrew.gr/images/image_main_page.jpg">   
+
+    
+    
+    
+    
+    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fonts.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon./favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon./favicon.svg" />
+    <link rel="shortcut icon" href="favicon./favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon./apple-touch-icon.png" />
+    <link rel="manifest" href="favicon./site.webmanifest" />
     <style>
         /* Essential CSS fix to ensure the button works with the popup */
         #email-popup {
@@ -34,7 +68,7 @@
             background-color: #d17a22;
         }
         
-        /* Προσθήκη στυλ για να φαίνεται το logo ως κουμπί (cursor) */
+       
         .logo {
             cursor: pointer;
             text-decoration: none;
@@ -49,7 +83,7 @@
         <a href="index.html" class="logo">Study<span>brew</span></a>
         <ul>
             <li><a href="for-cafes.html" class="nav-btn-special">Για Καφετέριες</a></li>
-            <li><a href="javascript:void(0)" id="contact-trigger">Επικοινωνία</a></li>
+            <li><a href="#contact" id="contact-trigger">Επικοινωνία</a></li>
     
             <li><a href="#features">Λειτουργίες</a></li>
             <li><a href="about.html">About us</a></li>
@@ -75,7 +109,7 @@
         <div class="banner-container">
             <div class="banner-content">
                 <span class="banner-badge">Mobile App</span>
-                <h2>Studybrew app coming soon... 🚀</h2>
+                <h2>Studybrew app coming soon... </h2>
                 <p>Σύντομα διαθέσιμο σε IOS & Android.</p>
             </div>
         </div>
@@ -141,6 +175,29 @@
         </div>
     </div>
 
+      <section class="final-cta" id="contact">
+        <div class="cta-box">
+            <div id="form-wrapper">
+                <h2>Κάνε εγγραφή τώρα!</h2>
+                <p id="form-description">Αφήστε τα στοιχεία σας και θα επικοινωνήσουμε μαζί σας.</p>
+                
+                <form id="my-form" action="https://formspree.io/f/xaqljlzo" method="POST" class="biz-form">
+                    <input type="text" name="cafe_name" placeholder="Email" required>
+                    <input type="email" name="email" placeholder="FIrst/Last Name" (Optional)>
+                    <input type="tel" name="phone" placeholder="Phone Number (Optional)">
+                    <button type="submit" id="submit-btn" class="submit-btn">Γίνε μέλος του δικτύου μας</button>
+                </form>
+
+                <div id="status-message" style="display:none; padding: 40px 0;">
+                    <div class="check-icon" style="width: 70px; height: 70px; background: #d17a22; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 30px;">✓</div>
+                    <h3 style="color: #2c1e16; font-size: 24px;">Application Received!</h3>
+                    <p>We'll be in touch soon.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <footer>
         <p>&copy; 2026 Studybrew. Δημιουργήθηκε από φοιτητές για φοιτητές.</p>
         <div class="social-links">
@@ -153,9 +210,7 @@
             <a href="https://tiktok.com/@studybrew__" target="_blank">
                  <img src="https://sp.yimg.com/ib/th/id/OIP.YBihg3khWw5WUbep0h8ghgHaHa?pid=Api&w=148&h=148&c=7&dpr=2&rs=1" alt="TikTok" class="social-icon-img">
             </a>
-            <a href="https://facebook.com/StudyBrew" target="_blank">
-                <img src="https://s.yimg.com/fz/api/res/1.2/os5bdoHa.xSvySgEG1LRjw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD00MTI7cHhvZmY9NTA7cHlvZmY9MTAwO3E9ODA7c3M9MTt3PTM4OA--/https://i.pinimg.com/736x/7b/ed/39/7bed398644d61cae7c4dd853b558a1c9.jpg" alt="FaceBook" class="social-icon-img">
-            </a>
+           
             <a href="https://www.linkedin.com/company/studybrew/" target="_blank">
                  <img src="https://s.yimg.com/fz/api/res/1.2/J52asMvsQAme_rxjJ7QT4w--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD00MTI7cHhvZmY9NTA7cHlvZmY9MTAwO3E9ODA7c3M9MTt3PTM4OA--/https://i.pinimg.com/736x/82/37/7b/82377b6182491c6f5feb7293e0a062d1.jpg" alt="LinkedIn" class="social-icon-img">
             </a>
