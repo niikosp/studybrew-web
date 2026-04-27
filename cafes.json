@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "Low grass",
+    "location": "Πανεπιστημίου 29, Αθήνα",
+    "image": "https://studybrew.gr/images/lowgrass1.png",
+    "description": "🔌 Πρίζες, 📶 Wi-Fi"
+  },
+
+
+
+  {
+    "id": 2,
+    "name": "Oktaimero books and coffee",
+    "location": "Ιπποκράτους 13, Αθήνα",
+    "image": "https://studybrew.gr/images/oktaimero1.png",
+    "description": "📖 Available books, 🔌 Πρίζες, 📶 Wi-Fi"
+  },
+
+   {
+    "id": 3,
+    "name": "Χάρτες",
+    "location": "Βαλτετσίου 35, Εξάρχεια, Αθήνα",
+    "image": "https://studybrew.gr/images/xartes1.png",
+    "description": "🔌 Πρίζες, 📶 Wi-Fi"
+  },
+
+    {
+    "id": 4,
+    "name": "Vinylio Record Store Cafe Bar",
+    "location": "Σολωμού 16, Εξάρχεια",
+    "image": "https://studybrew.gr/images/vinylio1.png",
+    "description": "📀 Available vinyls, 🔌 Πρίζες, 📶 Wi-Fi"
+  },
+
+    {
+    "id": 5,
+    "name": "Aroma όμορφης Πόλης",
+    "location": "Μάρνη 10, Εξάρχεια, Αθήνα",
+    "image": "https://studybrew.gr/images/Aroma1.png",
+    "description": "🔌 Πρίζες, 📶 Wi-Fi"
+  },
+
+     {
+    "id": 6,
+    "name": "Σύγχρονη εποχή",
+    "location": "Μαυροκορδάτου 3, Αθήνα",
+    "image": "https://studybrew.gr/images/sigxroni1.png",
+    "description": "📖 Available books, 🔌 Πρίζες, 📶 Wi-Fi"
+  },
+
+    {
+    "id": 7,
+    "name": "Stimmeno Lemoni",
+    "location": "Κεραμεικού 47Β, Αθήνα",
+    "image": "https://studybrew.gr/images/stimmeno_lemoni.png",
+    "description": "🔌 Πρίζες, 📶 Wi-Fi"
+  },
+
+    {
+    "id": 8,
+    "name": "Evmaros Bookcafe",
+    "location": "Κύπρου 1, Ταύρος Αττικής",
+    "image": "https://studybrew.gr/images/evmaros.png",
+    "description": "📖 Available books, 🔌 Πρίζες, 📶 Wi-Fi"
+  },
+
+
+    {
+    "id": 9,
+    "name": "red n'noir",
+    "location": "Ιωάννου Δροσοπούλου 52, Αθήνα",
+    "image": "https://studybrew.gr/images/redNnoir.png",
+    "description": "📖 Available books, 🔌 Πρίζες, 📶 Wi-Fi"
+  },
+
+   {
+    "id": 10,
+    "name": "Βίλα cafe",
+    "location": "Αχαρνών 71, Αθήνα",
+    "image": "https://studybrew.gr/images/vila.png",
+    "description": "📖 Available books, 🔌 Πρίζες, 📶 Wi-Fi"
+  }
+
+
+]
