@@ -1477,3 +1477,24 @@ footer {
         font-size: 0.9rem;
     }
 }
+
+/* --- MAP BUTTON --- */
+.btn-map {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 7px 16px;
+    background-color: #f0e8e0;
+    color: #6f4e37;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    white-space: nowrap;
+}
+
+.btn-map:hover {
+    background-color: #6f4e37;
+    color: white;
+}

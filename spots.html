@@ -349,5 +349,21 @@
         <p>&copy; 2026 Studybrew. Όλα τα δικαιώματα διατηρούνται.</p>
     </footer>
 
+    <script>
+        document.querySelectorAll('.spot-card').forEach(card => {
+            const locationEl = card.querySelector('.spot-location');
+            const footer = card.querySelector('.spot-footer');
+            if (!locationEl || !footer) return;
+            const address = locationEl.textContent.replace('📍', '').trim();
+            const btn = document.createElement('a');
+            btn.href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(address);
+            btn.target = '_blank';
+            btn.rel = 'noopener noreferrer';
+            btn.className = 'btn-map';
+            btn.textContent = '🗺️ Χάρτης';
+            footer.appendChild(btn);
+        });
+    </script>
+
 </body>
 </html>
