@@ -1,4 +1,4 @@
-/* --- ΓΕΝΙΚΕΣ ΡΥΘΜΙΣΕΙΣ --- */
+/* --- general --- */
 * {
     margin: 0;
     padding: 0;
@@ -62,7 +62,7 @@ url('images/image_main_page.jpg');
 .hero h1 span { color: #d17a22; }
 .hero p { margin-bottom: 5px; }
 
-/* --- Ο ΚΥΚΛΟΣ "ΔΕΣ ΤΑ STUDY SPOTS" --- */
+
 .spots-circle-container {
     margin-top: 40px;
     display: flex;
@@ -105,7 +105,7 @@ url('images/image_main_page.jpg');
 .circle-icon { font-size: 28px; margin-bottom: 5px; }
 .circle-text { font-size: 14px; }
 
-/* --- REWARDS SECTION --- */
+/* --- rewards section --- */
 .rewards-section { padding: 60px 10%; }
 .rewards-box {
     display: flex;
@@ -133,7 +133,7 @@ url('images/image_main_page.jpg');
 
 .rewards-icon-img { width: 180px; border-radius: 15px; }
 
-/* --- UNIFIED HOW IT WORKS & FEATURES (BOXES WITH ARROWS) --- */
+
 .how-it-works-arrows, .features {
     display: flex;
     justify-content: center;
@@ -451,7 +451,7 @@ footer {
 /* --- SPECIAL NAV BUTTON --- */
 .nav-btn-special {
     background-color: #d17a22;
-    color: white !important; /* Για να μην επηρεάζεται από τα άλλα links */
+    color: white !important;
     padding: 8px 18px;
     border-radius: 8px;
     font-weight: 600 !important;
@@ -494,39 +494,39 @@ footer {
     margin: 0 auto;
     border-radius: 2px;
 }
-/* --- 2. FEATURES MODERN (Τα νέα μικρά κουτάκια) --- */
+
 .features-modern {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Λίγο μικρότερο κενό */
-    padding: 40px 10%; /* Μικρότερο padding πάνω-κάτω */
+    gap: 20px; 
+    padding: 40px 10%; 
     background-color: #fff;
-    max-width: 1000px; /* Πιο στενό container για να "μαζέψουν" */
+    max-width: 1000px; 
     margin: 0 auto;
     flex-wrap: wrap;
 }
 
 .feature-card-new {
     flex: 1;
-    min-width: 200px; /* Μικρότερο ελάχιστο πλάτος */
-    max-width: 280px; /* Μικρότερο μέγιστο πλάτος */
-    padding: 20px 15px; /* Λιγότερος εσωτερικός χώρος */
+    min-width: 200px; 
+    max-width: 280px; 
+    padding: 20px 15px; 
     background: #ffffff;
     border: 1px solid #efeae4; 
-    border-radius: 12px; /* Πιο μικρές γωνίες */
+    border-radius: 12px; 
     text-align: center;
     transition: 0.3s ease;
-    box-shadow: 0 4px 10px rgba(111, 78, 55, 0.04); /* Πιο απαλή σκιά */
+    box-shadow: 0 4px 10px rgba(111, 78, 55, 0.04); 
 }
 
 .feature-card-new:hover {
-    transform: translateY(-5px); /* Μικρότερο "σήκωμα" στο hover */
+    transform: translateY(-5px); 
     border-color: #d17a22;
     box-shadow: 0 8px 20px rgba(170, 6, 6, 0.08);
 }
 
 .icon-new {
-    width: 45px; /* Πιο μικρό εικονίδιο */
+    width: 45px; 
     height: 45px;
     background-color: #fdf8f3;
     color: #d12222;
@@ -534,30 +534,30 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px; /* Μικρότερο emoji */
+    font-size: 20px; 
     margin: 0 auto 12px;
     border: 1.5px solid #d17a22;
 }
 
-/* Πιο μικρά γράμματα μέσα στα κουτάκια */
+
 .feature-card-new h3 {
-    font-size: 1rem; /* Μικρότερος τίτλος */
+    font-size: 1rem; 
     color: #2c1e16;
     margin-bottom: 8px;
     font-weight: 600;
 }
 
 .feature-card-new p {
-    font-size: 0.85rem; /* Μικρότερο κείμενο */
+    font-size: 0.85rem; 
     color: #666;
     line-height: 1.4;
 }
-/* ΑΝΑΓΚΑΣΤΙΚΟ ΜΙΚΡΟ ΜΕΓΕΘΟΣ ΓΙΑ ΤΑ FEATURES */
+/* features */
 #features .step-arrow-card {
-    flex: 0 1 200px !important; /* Μην απλώνεσαι, μείνε στα 250px */
+    flex: 0 1 200px !important; 
     min-width: 200px !important;
     max-width: 190px !important;
-    min-height: 150px !important; /* Πιο κοντό */
+    min-height: 150px !important;
     padding: 15px !important;
     margin: 10px auto;
     border: 2px solid #7e4300 !important; 
@@ -579,15 +579,15 @@ footer {
     font-size: 0.85rem !important;
 }
 
-/* Ευθυγράμμιση του container */
+/*  container */
 #features {
     justify-content: center !important;
     gap: 20px !important;
 }
 #features .step-icon-wrapper {
-    background-color: #2c1e16 !important; /* Το χρώμα του κύκλου */
-    color: #ffffff !important;           /* Το χρώμα του εικονιδίου */
-    border: none !important;             /* Αφαιρεί τη γραμμή */
+    background-color: #2c1e16 !important; 
+    color: #ffffff !important;          
+    border: none !important;            
 }
 /* --- FLOATING HERO STATS --- */
 .hero-stats-floating {
@@ -600,8 +600,8 @@ footer {
 .stat-circle {
     width: 100px;
     height: 100px;
-    background: rgba(44, 30, 22, 0.9); /* Σκούρο καφέ με λίγη διαφάνεια */
-    border: 2px solid #d17a22;        /* Πορτοκαλί περίγραμμα */
+    background: rgba(44, 30, 22, 0.9); 
+    border: 2px solid #d17a22;       
     border-radius: 50%;
     display: flex;
     flex-direction: column;
@@ -612,14 +612,14 @@ footer {
     animation: floatAnim 3s infinite ease-in-out;
 }
 
-/* Διαφορετικός χρονισμός για να μην κουνιούνται όλα μαζί */
+
 .stat-circle:nth-child(2) { animation-delay: 0.5s; }
 .stat-circle:nth-child(3) { animation-delay: 1s; }
 
 .stat-circle .num {
     font-size: 1.4rem;
     font-weight: 800;
-    color: #d17a22; /* Πορτοκαλί νούμερα */
+    color: #d17a22; 
 }
 
 .stat-circle .txt {
@@ -629,13 +629,12 @@ footer {
     letter-spacing: 0.5px;
 }
 
-/* Animation για να "επιπλέουν" */
 @keyframes floatAnim {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
 }
 
-/* Responsive για κινητά */
+/* Responsive for mobile */
 @media (max-width: 600px) {
     .stat-circle {
         width: 85px;
@@ -643,7 +642,7 @@ footer {
     }
     .stat-circle .num { font-size: 1.1rem; }
 }
-/* --- HOW IT WORKS ΓΙΑ ΕΠΙΧΕΙΡΗΣΕΙΣ --- */
+/* --- HOW IT WORKS FOR BUSINESSES --- */
 .how-it-works-business {
     padding: 60px 10%;
     background-color: #fff;
@@ -677,11 +676,11 @@ footer {
     box-shadow: 0 10px 25px rgba(111, 78, 55, 0.08);
 }
 
-/* ΤΟ ΚΥΚΛΑΚΙ ΜΕ ΤΟΝ ΑΡΙΘΜΟ - Σκούρο Καφέ */
+
 .biz-num {
     width: 50px;
     height: 50px;
-    background-color: #2c1e16; /* Σκούρο Καφέ */
+    background-color: #2c1e16; 
     color: #ffffff;
     border-radius: 50%;
     display: flex;
@@ -690,7 +689,7 @@ footer {
     font-size: 1.2rem;
     font-weight: 700;
     margin: 0 auto 20px;
-    border: 2px solid #d17a22; /* Πορτοκαλί περίγραμμα στο κυκλάκι */
+    border: 2px solid #d17a22; 
 }
 
 .biz-step-card h3 {
@@ -744,7 +743,6 @@ footer {
     box-shadow: 0 10px 25px rgba(111, 78, 55, 0.08);
 }
 
-/* Τα Αστέρια - Πορτοκαλί */
 .stars {
     color: #d17a22;
     font-size: 1.2rem;
@@ -759,10 +757,10 @@ footer {
     margin-bottom: 20px;
 }
 
-/* Πληροφορίες - Σκούρο Καφέ */
+
 .reviewer-info strong {
     display: block;
-    color: #2c1e16; /* Σκούρο Καφέ */
+    color: #2c1e16; 
     font-size: 1.1rem;
 }
 
@@ -773,7 +771,7 @@ footer {
     letter-spacing: 0.5px;
 }
 
-/* Εικονίδιο εισαγωγικών (Quotes) */
+
 .review-card::before {
     content: '"';
     position: absolute;
@@ -804,7 +802,7 @@ footer {
 }
 
 .faq-item:hover {
-    border-color: #d17a22; /* Πορτοκαλί περίγραμμα στο hover */
+    border-color: #d17a22; 
     box-shadow: 0 5px 15px rgba(111, 78, 55, 0.05);
 }
 
@@ -817,16 +815,16 @@ footer {
     cursor: pointer;
 }
 
-/* Η Ερώτηση - Σκούρο Καφέ */
+
 .faq-question h3 {
     font-size: 1.05rem;
-    color: #2c1e16; /* Σκούρο Καφέ */
+    color: #2c1e16; 
     font-weight: 600;
 }
 
-/* Το Σύμβολο + - Πορτοκαλί */
+
 .faq-toggle {
-    color: #d17a22; /* Πορτοκαλί */
+    color: #d17a22; 
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -834,11 +832,11 @@ footer {
 .faq-answer {
     padding: 0 25px 20px;
     background-color: #fdfbf7;
-    display: none; /* Αν θέλεις να ανοίγει με JavaScript */
-    /* Για τώρα, αφαίρεσε το display: none αν θες να φαίνονται όλα */
+    display: none; 
+   
 }
 
-/* Προσωρινά τα εμφανίζουμε όλα - Αν βάλεις JS, αφαίρεσε την από κάτω γραμμή */
+
 .faq-answer { display: block; }
 
 .faq-answer p {
@@ -848,7 +846,7 @@ footer {
 }
 
 .faq-answer strong {
-    color: #d17a22; /* Έμφαση στο κείμενο με Πορτοκαλί */
+    color: #d17a22;
 }
 /* --- COMPARISON STYLE --- */
 .comparison-section {
@@ -858,13 +856,13 @@ footer {
 
 .comp-wrapper {
     display: flex;
-    align-items: stretch; /* Για να έχουν το ίδιο ύψος */
+    align-items: stretch; 
     justify-content: center;
-    gap: 0; /* Τα κολλάμε για να φαίνεται η αντίθεση */
+    gap: 0; 
     max-width: 1000px;
     margin: 50px auto 0;
     border-radius: 25px;
-    overflow: hidden; /* Για να φαίνονται οι γωνίες στρογγυλές */
+    overflow: hidden; 
     box-shadow: 0 15px 40px rgba(0,0,0,0.1);
 }
 
@@ -874,7 +872,7 @@ footer {
     position: relative;
 }
 
-/* Η "Παλιά" Πλευρά (Γκρι/Απαλό) */
+
 .old-way {
     background-color: #f8f9fa;
     color: #888;
@@ -889,11 +887,11 @@ footer {
 
 .old-way .icon { color: #ff6b6b; margin-right: 10px; font-weight: bold; }
 
-/* Η Πλευρά StudyBrew (Σκούρο Καφέ & Πορτοκαλί) */
+
 .brew-way {
-    background-color: #2c1e16; /* Σκούρο Καφέ */
+    background-color: #2c1e16; 
     color: #fff;
-    border-left: 4px solid #d17a22; /* Πορτοκαλί διαχωριστικό */
+    border-left: 4px solid #d17a22; 
 }
 
 .brew-way .comp-header {
@@ -905,7 +903,7 @@ footer {
 
 .brew-way .icon { color: #d17a22; margin-right: 10px; font-weight: bold; }
 
-/* Το Badge "Η ΛΥΣΗ" */
+
 .comp-badge {
     position: absolute;
     top: 20px;
@@ -919,7 +917,6 @@ footer {
     letter-spacing: 1px;
 }
 
-/* Λίστα */
 .comp-list {
     list-style: none;
     padding: 0;
@@ -932,7 +929,7 @@ footer {
     align-items: center;
 }
 
-/* Κουμπί μέσα στην κάρτα */
+
 .comp-btn {
     display: inline-block;
     margin-top: 30px;
@@ -950,15 +947,15 @@ footer {
     color: #2c1e16;
 }
 
-/* Responsive για κινητά */
+/* Responsive for mobile */
 @media (max-width: 850px) {
     .comp-wrapper { flex-direction: column; }
     .brew-way { border-left: none; border-top: 5px solid #d17a22; }
 }
-/* --- STYLE ΓΙΑ ΤΗ ΦΟΡΜΑ ΕΠΙΚΟΙΝΩΝΙΑΣ --- */
+/* --- STYLE FOR COMMUNICATION FORM --- */
 .final-cta {
     padding: 80px 10%;
-    background-color: #fdf8f3; /* Απαλό φόντο που ταιριάζει με το πορτοκαλί */
+    background-color: #fdf8f3; 
     text-align: center;
 }
 
@@ -968,7 +965,7 @@ footer {
 }
 
 .cta-box h2 {
-    color: #2c1e16; /* Σκούρο Καφέ */
+    color: #2c1e16;
     margin-bottom: 15px;
     font-size: 2rem;
 }
@@ -994,13 +991,13 @@ footer {
 }
 
 .biz-form input:focus {
-    border-color: #d17a22; /* Πορτοκαλί περίγραμμα όταν γράφεις */
+    border-color: #d17a22; 
     box-shadow: 0 0 8px rgba(209, 122, 34, 0.1);
 }
 
 .submit-btn {
     padding: 18px;
-    background-color: #d17a22; /* Πορτοκαλί κουμπί */
+    background-color: #d17a22; 
     color: white;
     border: none;
     border-radius: 10px;
@@ -1012,7 +1009,7 @@ footer {
 }
 
 .submit-btn:hover {
-    background-color: #2c1e16; /* Γίνεται σκούρο καφέ στο hover */
+    background-color: #2c1e16; 
     transform: translateY(-2px);
 }
 /* --- THANKS PAGE STYLE --- */
@@ -1021,7 +1018,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fcfaf8; /* Απαλό φόντο */
+    background-color: #fcfaf8; 
     text-align: center;
     padding: 20px;
 }
@@ -1038,7 +1035,7 @@ footer {
 .check-icon {
     width: 80px;
     height: 80px;
-    background-color: #d17a22; /* Πορτοκαλί */
+    background-color: #d17a22; 
     color: white;
     font-size: 2.5rem;
     line-height: 80px;
@@ -1047,7 +1044,7 @@ footer {
 }
 
 .thanks-content h1 {
-    color: #2c1e16; /* Σκούρο Καφέ */
+    color: #2c1e16; 
     font-size: 2rem;
     margin-bottom: 15px;
 }
@@ -1122,7 +1119,7 @@ footer {
 /* --- MOBILE RESPONSIVE STYLE --- */
 
 @media (max-width: 768px) {
-    /* 1. Navbar: Το logo και το μενού να μπαίνουν σε στήλη */
+    /* 1. Navbar*/
     nav {
         flex-direction: column;
         padding: 15px;
@@ -1130,7 +1127,7 @@ footer {
     }
 
     nav ul {
-        flex-wrap: wrap; /* Επιτρέπει στα κουμπιά να αλλάζουν γραμμή αν δεν χωράνε */
+        flex-wrap: wrap; 
         justify-content: center;
         gap: 10px;
         font-size: 14px;
@@ -1141,7 +1138,7 @@ footer {
         font-size: 13px;
     }
 
-    /* 2. Hero Section: Μικρότερα γράμματα για να μην πιάνουν όλη την οθόνη */
+    /* 2. Hero Section */
     .hero h1 {
         font-size: 24px;
         line-height: 1.3;
@@ -1151,7 +1148,7 @@ footer {
         font-size: 16px;
     }
 
-    /* 3. Steps & Features: Από οριζόντια, γίνονται κάθετα */
+    /* 3. Steps & Features*/
     .how-it-works-arrows, 
     .features, 
     .biz-steps-container {
@@ -1162,26 +1159,26 @@ footer {
     }
 
     .flow-arrow {
-        transform: rotate(90deg); /* Το βέλος δείχνει προς τα κάτω αντί για δεξιά */
+        transform: rotate(90deg); 
         margin: 10px 0;
     }
 
     .step-arrow-card, .biz-step-card {
-        width: 90%; /* Πιάνουν όλο το πλάτος του κινητού */
+        width: 90%; 
         max-width: 350px;
     }
 
-    /* 4. Φόρμα: Πιο άνετα περιθώρια */
+    /* 4. Form */
     .cta-box {
         width: 95%;
         padding: 20px;
     }
 
     .biz-form input {
-        font-size: 16px; /* Εμποδίζει το αυτόματο zoom στο iPhone */
+        font-size: 16px; 
     }
 
-    /* 5. Popup: Να χωράει στην οθόνη του κινητού */
+    /* 5. Popup*/
     .popup-content {
         width: 90%;
         padding: 25px;
@@ -1191,7 +1188,7 @@ footer {
         font-size: 18px;
     }
 
-    /* 6. Footer: Τα social links να είναι πιο μεγάλα για να πατιούνται εύκολα */
+    /* 6. Footer */
     .social-links {
         gap: 20px;
     }
@@ -1204,7 +1201,7 @@ footer {
 /* --- UNIVERSAL MOBILE RESPONSIVE (iOS & Android) --- */
 
 @media (max-width: 768px) {
-    /* 1. Navbar: Στοίχιση σε στήλη για να μην στριμώχνονται τα κουμπιά */
+    
     nav {
         flex-direction: column;
         padding: 15px 20px;
@@ -1214,19 +1211,19 @@ footer {
 
     nav ul {
         flex-direction: row;
-        flex-wrap: wrap; /* Επιτρέπει στα κουμπιά να αλλάζουν γραμμή αν είναι πολλά */
+        flex-wrap: wrap; 
         justify-content: center;
         gap: 10px;
     }
 
-    /* 2. Hero Section: Διόρθωση μεγέθους για να μην βγαίνει εκτός οθόνης */
+    /* 2. Hero Section */
     .hero {
         padding: 60px 20px;
         min-height: auto;
     }
 
     .hero h1 {
-        font-size: 1.6rem; /* Πιο μαζεμένο για μικρές οθόνες */
+        font-size: 1.6rem; 
         line-height: 1.2;
     }
 
@@ -1235,7 +1232,7 @@ footer {
         margin-bottom: 20px;
     }
 
-    /* 3. Cards & Steps: Από οριζόντια σε κάθετη διάταξη */
+    /* 3. Cards & Steps*/
     .how-it-works-arrows, 
     .features, 
     .biz-steps-container,
@@ -1246,7 +1243,7 @@ footer {
         padding: 30px 15px;
     }
 
-    /* Τα βέλη γυρνάνε προς τα κάτω */
+    
     .flow-arrow {
         transform: rotate(90deg);
         font-size: 1.5rem;
@@ -1255,21 +1252,21 @@ footer {
 
     .step-arrow-card, .biz-step-card {
         width: 100%;
-        max-width: 320px; /* Ιδανικό μέγεθος για iPhone SE και μικρά Android */
+        max-width: 320px; 
         margin: 0 auto;
     }
 
-    /* 4. Forms: Σημαντικό για iOS (iPhone) */
+    /* 4. Forms: iOS (iPhone) */
     .biz-form input, 
     .popup-form input {
         width: 100%;
-        font-size: 16px !important; /* ΣΤΑΜΑΤΑΕΙ το ενοχλητικό αυτόματο zoom του iPhone */
+        font-size: 16px !important;
         padding: 12px;
         margin-bottom: 10px;
     }
 
     .submit-btn, .btn-popup {
-        width: 100%; /* Το κουμπί πιάνει όλο το πλάτος για να πατιέται εύκολα με τον αντίχειρα */
+        width: 100%; 
         padding: 15px;
     }
 
@@ -1283,7 +1280,7 @@ footer {
         font-size: 0.95rem;
     }
 
-    /* 6. Footer: Μεγάλα εικονίδια για εύκολο κλικ */
+    /* 6. Footer*/
     .social-links {
         display: flex;
         flex-wrap: wrap;
@@ -1296,7 +1293,7 @@ footer {
         height: 35px;
     }
 
-    /* 7. Popup: Να μην κολλάει στις άκρες της οθόνης */
+    /* 7. Popup */
     .popup-content {
         width: 90% !important;
         padding: 20px;
@@ -1304,7 +1301,7 @@ footer {
     }
 }
 
-/* Για ΠΟΛΥ μικρά κινητά (iPhone SE, παλιά Android) */
+
 @media (max-width: 380px) {
     .hero h1 {
         font-size: 1.4rem;
@@ -1319,27 +1316,27 @@ footer {
         padding: 6px 10px;
     }
 }
-/* --- ΔΙΑΤΑΞΗ ΜΕΝΟΥ ΓΙΑ ΚΙΝΗΤΑ (2 ΣΕΙΡΕΣ) --- */
+
 
 @media (max-width: 768px) {
     nav {
         display: flex;
-        flex-direction: column; /* Το ένα κάτω από το άλλο */
+        flex-direction: column; 
         align-items: center;
         padding: 15px 10px;
         gap: 15px;
     }
 
-    /* Το Logo μόνο του πάνω */
+    
     .logo {
         margin: 0;
         font-size: 1.5rem;
     }
 
-    /* Το <ul> γίνεται Grid για να ορίσουμε ακριβώς τις σειρές */
+    
     nav ul {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Δύο ίσες στήλες */
+        grid-template-columns: 1fr 1fr;
         gap: 10px;
         width: 100%;
         padding: 0;
@@ -1350,49 +1347,44 @@ footer {
         width: 100%;
     }
 
-    /* Τα κουμπιά να πιάνουν όλο το χώρο του κελιού τους */
     nav ul li a {
         display: block;
         text-align: center;
         padding: 10px 5px;
         font-size: 13px;
-        background: #f8f8f8; /* Ελαφρύ φόντο για να φαίνονται σαν κουμπιά */
+        background: #f8f8f8;
         border-radius: 8px;
         border: 1px solid #eee;
     }
 
-    /* Ειδικό στυλ για τα κύρια κουμπιά (Για Καφετέριες & Επικοινωνία) */
     .nav-btn-special, #contact-trigger {
         background-color: #6f4e37 !important;
         color: white !important;
         font-weight: 600;
     }
 
-    /* Σειρά 1: Για Καφετέριες & Επικοινωνία (θα τα βάλουμε πρώτα στο Grid) */
-    /* Αν θέλεις συγκεκριμένη σειρά, μπορούμε να χρησιμοποιήσουμε το order */
 }
-/* --- ΕΥΘΥΓΡΑΜΜΙΣΗ ΚΟΥΜΠΙΟΥ ΣΤΑ ΔΕΞΙΑ --- */
 .spot-footer {
-    display: flex;             /* Ενεργοποιεί το Flexbox */
-    justify-content: space-between; /* Σπρώχνει τα περιεχόμενα στις δύο άκρες */
-    align-items: center;       /* Τα ευθυγραμμίζει κάθετα στο κέντρο */
-    padding: 15px 20px;        /* Δίνει λίγο "αέρα" εσωτερικά */
-    border-top: 1px solid #eee; /* Προαιρετικό: μια διακριτική γραμμή πάνω από το footer */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-top: 1px solid #eee;
 }
 
 .price-info {
     display: flex;
-    flex-direction: column;    /* Βάζει το "Ελάχιστη κατανάλωση" πάνω από το "-" */
+    flex-direction: column;
     text-align: left;
 }
 
 .btn-book-now {
-    margin-left: 20px;         /* Εξασφαλίζει ότι δεν θα κολλήσει πάνω στην τιμή */
-    white-space: nowrap;       /* Εμποδίζει το κείμενο να αλλάξει γραμμή */
+    margin-left: 20px;
+    white-space: nowrap;
 }
 @media (max-width: 480px) {
     .spot-footer {
-        flex-direction: column; /* Σε μικρά κινητά μπαίνουν το ένα κάτω από το άλλο */
+        flex-direction: column;
         gap: 15px;
         text-align: center;
     }
@@ -1402,7 +1394,7 @@ footer {
     }
     
     .btn-book-now {
-        width: 100%; /* Το κουμπί πιάνει όλο το πλάτος στο κινητό */
+        width: 100%;
         margin-left: 0;
     }
 }
