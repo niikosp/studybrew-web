@@ -74,6 +74,194 @@
             text-decoration: none;
             display: inline-block;
         }
+
+        /* PREMIUM ORGANIC GALLERY CSS (ΠΡΟΣΘΗΚΗ) */
+        .premium-gallery {
+            padding: 100px 20px;
+            background-color: #faf6f0;
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+        }
+        .gallery-wrapper {
+            max-width: 1140px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 50px;
+            align-items: center;
+        }
+        .gallery-text-side {
+            text-align: left;
+        }
+        .mini-title {
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #d17a22;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .gallery-text-side h2 {
+            font-size: 38px;
+            line-height: 1.2;
+            color: #2c1e16;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .gallery-text-side p {
+            color: #7a6e67;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .organic-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            position: relative;
+            height: 480px;
+        }
+        .collage-item {
+            position: absolute;
+            background: #faf6f0;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(44, 30, 22, 0.06);
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .collage-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .item-one {
+            grid-column: 1 / 8;
+            top: 0;
+            width: 100%;
+            height: 280px;
+            z-index: 2;
+        }
+        .item-two {
+            grid-column: 6 / 13;
+            top: 140px;
+            width: 100%;
+            height: 320px;
+            z-index: 3;
+        }
+        .item-three {
+            grid-column: 1 / 6;
+            bottom: -20px;
+            width: 100%;
+            height: 180px;
+            z-index: 1;
+        }
+        .collage-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(111, 78, 55, 0.15);
+            z-index: 4;
+        }
+        .collage-item:hover img {
+            transform: scale(1.05);
+        }
+        .view-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.3s ease;
+        }
+        .collage-item:hover .view-btn {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* LIGHTBOX STYLING (ΠΡΟΣΘΗΚΗ) */
+        .lightbox-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .lightbox-overlay.show {
+            display: flex;
+            opacity: 1;
+        }
+        .lightbox-content {
+            max-width: 85%;
+            max-height: 80%;
+            text-align: center;
+            position: relative;
+            animation: zoomIn 0.3s ease;
+        }
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 75vh;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        #lightbox-caption {
+            color: white;
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .lightbox-close:hover {
+            color: #d17a22;
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        @media (max-width: 900px) {
+            .gallery-wrapper {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+            .gallery-text-side { text-align: center; }
+            .organic-grid {
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            .collage-item {
+                position: relative;
+                top: auto !important;
+                bottom: auto !important;
+                left: auto !important;
+                height: 250px !important;
+                width: 100% !important;
+            }
+        }
     </style>
 </head>
 
@@ -105,13 +293,29 @@
         </div>
     </header>
 
-    <section class="event-banner">
-        <div class="event-banner-container">
-            <div class="event-banner-content">
-                <span class="event-banner-badge">Η εξεταστική πλησιάζει...</span>
-                <h2>☕ Team study session στο Evmaros Bookcafe</h2>
-                <p class="event-meta">🗓️ Σάββατο 16 Μαΐου &nbsp;·&nbsp; 🕕 Στη 13:00 &nbsp;·&nbsp; 📍 Κύπρου 1, Ταύρος Αττικής</p>
-                <p class="event-description">Ελάτε να διαβάσετε με παρέα!</p>
+
+    <!-- PREMIUM COllAGE GALLERY -->
+    <section class="premium-gallery">
+        <div class="gallery-wrapper">
+            <div class="gallery-text-side">
+                <span class="mini-title">The Vibe</span>
+                <h2>Στιγμές από το<br>1ο μας event.</h2>
+                <p>Διαβάσαμε, ήπιαμε καφέ και γίναμε μια παρέα στο Evmaros Bookcafe. Ήσουν εκεί; </p>
+            </div>
+            
+            <div class="organic-grid">
+                <div class="collage-item item-one" onclick="openLightbox('images/event1_1.jpg', 'Full house στο Evmaros! ☕')">
+                    <img src="images/event3.jpg" alt="Studybrew Event 1">
+                    <div class="view-btn"><span>🔍</span></div>
+                </div>
+                <div class="collage-item item-two" onclick="openLightbox('images/event1_2.jpg', 'Focus & Καφές 📚')">
+                    <img src="images/event1.jpg.jpg" alt="Studybrew Event 2">
+                    <div class="view-btn"><span>🔍</span></div>
+                </div>
+                <div class="collage-item item-three" onclick="openLightbox('images/event1_3.jpg', 'Γνωριμίες & Networking 🤝')">
+                    <img src="images/event2.jpg" alt="Studybrew Event 3">
+                    <div class="view-btn"><span>🔍</span></div>
+                </div>
             </div>
         </div>
     </section>
@@ -228,6 +432,33 @@
         </div>
     </footer>
 
+    <!-- LIGHTBOX OVERLAY HTML (ΠΡΟΣΘΗΚΗ) -->
+    <div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <img id="lightbox-img" src="" alt="Large view">
+            <div id="lightbox-caption"></div>
+        </div>
+    </div>
+
    <script src="script.js"></script>
+   
+   <!-- LIGHTBOX JAVASCRIPT (ΠΡΟΣΘΗΚΗ) -->
+   <script>
+        function openLightbox(imageSrc, captionText) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            
+            lightboxImg.src = imageSrc;
+            lightboxCaption.textContent = captionText;
+            lightbox.classList.add('show');
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('show');
+        }
+   </script>
 </body>
 </html>
