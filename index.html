@@ -2,45 +2,42 @@
 <html lang="el">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FJTVTQZW7K"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJTVTQZW7K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-FJTVTQZW7K');
-</script>
+      gtag('config', 'G-FJTVTQZW7K');
+    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studybrew ☕ | Book your Study Spot</title>
 
-
     <!--LINK PREVIEW-->
     <meta property="og:title" content="Studybrew ☕ | Book your Study Spot">
     <meta property="og:description" content="Κλείσε ατομικά ή ομαδικά spots στα καλύτερα study-friendly cafes της πόλης.">
-    <meta property="og:image" content="https://studybrew.gr/images/image_main_page.jpg"> <meta property="og:url" content="https://studybrew.gr">
+    <meta property="og:image" content="https://studybrew.gr/images/image_main_page.jpg"> 
+    <meta property="og:url" content="https://studybrew.gr">
     <meta property="og:type" content="website">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Studybrew ☕">
     <meta name="twitter:description" content="Book your Study Spot.">
     <meta name="twitter:image" content="https://studybrew.gr/images/image_main_page.jpg">   
-
-    
-    
-    
-    
     
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fonts.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon./favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="favicon./favicon.svg" />
     <link rel="shortcut icon" href="favicon./favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="favicon./apple-touch-icon.png" />
     <link rel="manifest" href="favicon./site.webmanifest" />
+    
     <style>
         /* Essential CSS fix to ensure the button works with the popup */
         #email-popup {
@@ -67,15 +64,14 @@
         #contact-trigger:hover {
             background-color: #d17a22;
         }
-        
-       
+               
         .logo {
             cursor: pointer;
             text-decoration: none;
             display: inline-block;
         }
 
-        /* PREMIUM ORGANIC GALLERY CSS (ΠΡΟΣΘΗΚΗ) */
+        /* PREMIUM ORGANIC GALLERY CSS */
         .premium-gallery {
             padding: 100px 20px;
             background-color: #faf6f0;
@@ -184,7 +180,7 @@
             transform: scale(1);
         }
 
-        /* LIGHTBOX STYLING (ΠΡΟΣΘΗΚΗ) */
+        /* LIGHTBOX STYLING */
         .lightbox-overlay {
             display: none;
             position: fixed;
@@ -272,10 +268,9 @@
         <ul>
             <li><a href="for-cafes.html" class="nav-btn-special">Για Καφετέριες</a></li>
             <li><a href="#contact" id="contact-trigger">Επικοινωνία</a></li>
-    
             <li><a href="#features">Λειτουργίες</a></li>
             <li><a href="about.html">About us</a></li>
-</ul>
+        </ul>
     </nav>
 
     <header class="hero">
@@ -294,7 +289,7 @@
     </header>
 
 
-    <!-- PREMIUM COllAGE GALLERY -->
+    <!-- PREMIUM COLLAGE GALLERY -->
     <section class="premium-gallery">
         <div class="gallery-wrapper">
             <div class="gallery-text-side">
@@ -304,16 +299,16 @@
             </div>
             
             <div class="organic-grid">
-                <div class="collage-item item-one" onclick="openLightbox('images/event1_1.jpg', 'Full house στο Evmaros! ☕')">
+                <div class="collage-item item-one" onclick="openLightbox('images/event3.jpg', 'Full house στο Evmaros! ☕')">
                     <img src="images/event3.jpg" alt="Studybrew Event 1">
                     <div class="view-btn"><span>🔍</span></div>
                 </div>
-                <div class="collage-item item-two" onclick="openLightbox('images/event1_2.jpg', 'Focus & Καφές 📚')">
+                <div class="collage-item item-two" onclick="openLightbox('images/event1.jpg.jpg', 'Focus & Καφές 📚')">
                     <img src="images/event1.jpg.jpg" alt="Studybrew Event 2">
                     <div class="view-btn"><span>🔍</span></div>
                 </div>
-                <div class="collage-item item-three" onclick="openLightbox('images/event1_3.jpg', 'Γνωριμίες & Networking 🤝')">
-                    <img src="images/event2.jpg" alt="Studybrew Event 3">
+                <div class="collage-item item-three" onclick="openLightbox('images/event4.jpg', 'Γνωριμίες & Networking 🤝')">
+                    <img src="images/event4.jpg" alt="Studybrew Event 3">
                     <div class="view-btn"><span>🔍</span></div>
                 </div>
             </div>
@@ -382,7 +377,7 @@
                 <h2>Θέλεις να μαθαίνεις πρώτος για το app του Studybrew;</h2>
                 <p>Δώσε μας το email σου και θα σε ενημερώσουμε μόλις κυκλοφορήσει!</p>
                 <form action="https://formspree.io/f/mojrqqyq" method="POST" class="popup-form">
-                     <input type="email" name="email" placeholder="Το email σου εδώ..." required>
+                    <input type="email" name="email" placeholder="Το email σου εδώ..." required>
                     <input type="hidden" name="_subject" value="New Studybrew Subscriber!">
                     <button type="submit" class="btn-popup">Εγγραφή</button>
                 </form>
@@ -390,15 +385,15 @@
         </div>
     </div>
 
-      <section class="final-cta" id="contact">
+    <section class="final-cta" id="contact">
         <div class="cta-box">
             <div id="form-wrapper">
                 <h2>Κάνε εγγραφή τώρα!</h2>
-                <p id="form-description">Αφήστε τα στοιχεία σας και θα επικοινωνήσουμε μαζί σας.</p>
+                <p id="form-description">Αφήστε τα στοιχεία σας και θα επικοινωνήσουμε μαζί wellness.</p>
                 
                 <form id="my-form" action="https://formspree.io/f/xgodeerv" method="POST" class="biz-form">
                     <input type="text" name="cafe_name" placeholder="Email" required>
-                    <input type="email" name="email" placeholder="FIrst/Last Name" (Optional)>
+                    <input type="email" name="email" placeholder="First/Last Name (Optional)">
                     <input type="tel" name="phone" placeholder="Phone Number (Optional)">
                     <button type="submit" id="submit-btn" class="submit-btn">Γίνε μέλος του δικτύου μας</button>
                 </form>
@@ -425,14 +420,13 @@
             <a href="https://www.tiktok.com/@studybrew.app?_r=1&_t=ZN-95yKE5wse2g" target="_blank">
                  <img src="https://sp.yimg.com/ib/th/id/OIP.YBihg3khWw5WUbep0h8ghgHaHa?pid=Api&w=148&h=148&c=7&dpr=2&rs=1" alt="TikTok" class="social-icon-img">
             </a>
-           
             <a href="https://www.linkedin.com/company/studybrew/" target="_blank">
                  <img src="https://s.yimg.com/fz/api/res/1.2/J52asMvsQAme_rxjJ7QT4w--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD00MTI7cHhvZmY9NTA7cHlvZmY9MTAwO3E9ODA7c3M9MTt3PTM4OA--/https://i.pinimg.com/736x/82/37/7b/82377b6182491c6f5feb7293e0a062d1.jpg" alt="LinkedIn" class="social-icon-img">
             </a>
         </div>
     </footer>
 
-    <!-- LIGHTBOX OVERLAY HTML (ΠΡΟΣΘΗΚΗ) -->
+    <!-- LIGHTBOX OVERLAY HTML -->
     <div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
         <span class="lightbox-close">&times;</span>
         <div class="lightbox-content" onclick="event.stopPropagation()">
@@ -443,7 +437,7 @@
 
    <script src="script.js"></script>
    
-   <!-- LIGHTBOX JAVASCRIPT (ΠΡΟΣΘΗΚΗ) -->
+   <!-- LIGHTBOX JAVASCRIPT -->
    <script>
         function openLightbox(imageSrc, captionText) {
             const lightbox = document.getElementById('lightbox');
