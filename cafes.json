@@ -39,14 +39,7 @@
     "description": "🔌 Πρίζες, 📶 Wi-Fi",
     "coords": { "latitude": 37.98919, "longitude": 23.72978 }
   },
-  {
-    "id": 6,
-    "name": "Σύγχρονη εποχή",
-    "location": "Μαυροκορδάτου 3, Αθήνα",
-    "image": "https://www.studybrew.gr/images/sigxroni.jpg",
-    "description": "📖 Available books, 🔌 Πρίζες, 📶 Wi-Fi",
-    "coords": { "latitude": 37.98335, "longitude": 23.73215 }
-  },
+ 
   {
     "id": 7,
     "name": "Stimmeno Lemoni",
