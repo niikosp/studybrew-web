@@ -5,7 +5,11 @@
     "location": "Πανεπιστημίου 29, Αθήνα",
     "image": "https://www.studybrew.gr/images/lowgrass.jpg",
     "description": "🔌 Πρίζες, 📶 Wi-Fi",
-    "coords": { "latitude": 37.97968, "longitude": 23.73327 }
+    "coords": { "latitude": 37.97968, "longitude": 23.73327 },
+    "vibe": "aesthetic",
+    "noiseLevel": "low",
+    "seating": "plenty",
+    "wifi": "fast"
   },
   {
     "id": 2,
@@ -13,7 +17,11 @@
     "location": "Ιπποκράτους 13, Αθήνα",
     "image": "https://www.studybrew.gr/images/oktaimero1.jpg",
     "description": "📖 Available books, 🔌 Πρίζες, 📶 Wi-Fi",
-    "coords": { "latitude": 37.98191, "longitude": 23.73326 }
+    "coords": { "latitude": 37.98191, "longitude": 23.73326 },
+    "vibe": "cozy",
+    "noiseLevel": "low",
+    "seating": "limited",
+    "wifi": "fast"
   },
   {
     "id": 3,
@@ -21,7 +29,11 @@
     "location": "Βαλτετσίου 35, Εξάρχεια, Αθήνα",
     "image": "https://www.studybrew.gr/images/xartes.jpg",
     "description": "🔌 Πρίζες, 📶 Wi-Fi",
-    "coords": { "latitude": 37.98501, "longitude": 23.73603 }
+    "coords": { "latitude": 37.98501, "longitude": 23.73603 },
+    "vibe": "social",
+    "noiseLevel": "medium",
+    "seating": "plenty",
+    "wifi": "fast"
   },
   {
     "id": 4,
@@ -29,7 +41,11 @@
     "location": "Σολωμού 16, Εξάρχεια",
     "image": "https://www.studybrew.gr/images/vinylio.jpg",
     "description": "📀 Available vinyls, 🔌 Πρίζες, 📶 Wi-Fi",
-    "coords": { "latitude": 37.98657, "longitude": 23.73369 }
+    "coords": { "latitude": 37.98657, "longitude": 23.73369 },
+    "vibe": "social",
+    "noiseLevel": "high",
+    "seating": "limited",
+    "wifi": "slow"
   },
   {
     "id": 5,
@@ -37,16 +53,24 @@
     "location": "Μάρνη 10, Εξάρχεια, Αθήνα",
     "image": "https://www.studybrew.gr/images/Aroma.jpg",
     "description": "🔌 Πρίζες, 📶 Wi-Fi",
-    "coords": { "latitude": 37.98919, "longitude": 23.72978 }
+    "coords": { "latitude": 37.98919, "longitude": 23.72978 },
+    "vibe": "aesthetic",
+    "noiseLevel": "medium",
+    "seating": "plenty",
+    "wifi": "fast"
   },
- 
+
   {
     "id": 7,
     "name": "Stimmeno Lemoni",
     "location": "Κεραμεικού 47Β, Αθήνα",
     "image": "https://www.studybrew.gr/images/stimmenolemoni.jpg",
     "description": "🔌 Πρίζες, 📶 Wi-Fi",
-    "coords": { "latitude": 37.98238, "longitude": 23.72053 }
+    "coords": { "latitude": 37.98238, "longitude": 23.72053 },
+    "vibe": "cozy",
+    "noiseLevel": "low",
+    "seating": "plenty",
+    "wifi": "fast"
   },
   {
     "id": 8,
@@ -54,7 +78,11 @@
     "location": "Κύπρου 1, Ταύρος Αττικής",
     "image": "https://www.studybrew.gr/images/evmaros.jpg",
     "description": "📖 Available books, 🔌 Πρίζες, 📶 Wi-Fi",
-    "coords": { "latitude": 37.96326, "longitude": 23.69934 }
+    "coords": { "latitude": 37.96326, "longitude": 23.69934 },
+    "vibe": "quiet",
+    "noiseLevel": "low",
+    "seating": "limited",
+    "wifi": "fast"
   },
   {
     "id": 9,
@@ -62,7 +90,11 @@
     "location": "Ιωάννου Δροσοπούλου 52, Αθήνα",
     "image": "https://www.studybrew.gr/images/rednnoir.jpg",
     "description": "📖 Available books, 🔌 Πρίζες, 📶 Wi-Fi",
-    "coords": { "latitude": 37.9992, "longitude": 23.7346 }
+    "coords": { "latitude": 37.9992, "longitude": 23.7346 },
+    "vibe": "aesthetic",
+    "noiseLevel": "medium",
+    "seating": "plenty",
+    "wifi": "fast"
   },
   {
     "id": 10,
@@ -70,6 +102,10 @@
     "location": "Αχαρνών 71, Αθήνα",
     "image": "https://www.studybrew.gr/images/vila.jpg",
     "description": "📖 Available books, 🔌 Πρίζες, 📶 Wi-Fi",
-    "coords": { "latitude": 37.99363, "longitude": 23.72683 }
+    "coords": { "latitude": 37.99363, "longitude": 23.72683 },
+    "vibe": "cozy",
+    "noiseLevel": "low",
+    "seating": "plenty",
+    "wifi": "fast"
   }
 ]

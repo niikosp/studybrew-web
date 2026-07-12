@@ -1,15 +1,6 @@
 <html lang="el">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FJTVTQZW7K"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-FJTVTQZW7K');
-</script>
-
+    <!-- Google Analytics is loaded only after cookie consent, see cookie-consent.js -->
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -321,6 +312,8 @@
 
     <footer>
         <p>&copy; 2026 Studybrew. Όλα τα δικαιώματα διατηρούνται.</p>
+        <p><a href="privacy.html">Πολιτική Απορρήτου &amp; Cookies</a> ·
+            <button type="button" class="cookie-settings-link" onclick="window.sbOpenCookieSettings && window.sbOpenCookieSettings()">Ρυθμίσεις Cookies</button></p>
     </footer>
 
     <script>
@@ -338,6 +331,7 @@
             footer.appendChild(btn);
         });
     </script>
+    <script src="cookie-consent.js"></script>
 
 </body>
 </html>
